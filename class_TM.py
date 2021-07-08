@@ -2,8 +2,7 @@ import pandas as pd
 
 class TM:
     "Class for Turma da Mônica comic book"
-    def __init__(self, directory):
-        self.directory = directory
+    def __init__(self):
         self.data = pd.DataFrame({'Page': ['Page 1']})
         self.data.set_index('Page', inplace = True)
 
@@ -23,8 +22,10 @@ class TM:
     
         return self.data
 
-    def pack(self):
-        pass
+    def pack(self, path):
+        self.data.to_csv(path)
 
-    def unpacl(self):
-        pass
+    def unpack(self, path):
+        self.data = pd.read_csv(path,
+                                index_col = 'Page',
+                                keep_default_na = False)
