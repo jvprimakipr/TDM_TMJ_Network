@@ -5,8 +5,15 @@ class TM:
     def __init__(self):
         self.data = pd.DataFrame({'Page': ['Page 1']})
         self.data.set_index('Page', inplace = True)
+        self.characters = []
+        self.n_characters = 0
 
     def insert(self, inserting):
+        for character in inserting:
+            if character not in self.characters:
+                self.characters.append(character)
+                self.n_characters += 1
+        
         if len(inserting) > len(self.data.columns):
             while len(inserting) > len(self.data.columns):
                 new_column = ['' for i in range(len(self.data))]
