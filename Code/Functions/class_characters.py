@@ -18,28 +18,28 @@ class characters:
             self.father_number = 1
         else:
             self.father_number += 1
-        return f'Atendente {self.father_number}'
+        return f'Pai {self.father_number}'
     
     def mot(self, reset = False):
         if reset:
             self.mother_number = 1
         else:
             self.mother_number += 1
-        return f'Atendente {self.mother_number}'
+        return f'Mãe {self.mother_number}'
 
     def fig(self, reset = False):
         if reset:
             self.figurante_number = 1
         else:
             self.figurante_number += 1
-        return f'Atendente {self.figurante_number}'
+        return f'Figurante {self.figurante_number}'
     
     def child(self, reset = False):
         if reset:
             self.child_number = 1
         else:
             self.child_number += 1
-        return f'Atendente {self.child_number}'
+        return f'Criança {self.child_number}'
 
     def mon(self):
         return 'Mônica'
