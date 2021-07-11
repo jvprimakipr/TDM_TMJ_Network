@@ -91,3 +91,6 @@ class characters:
 
     def pcas(self):
         return 'Pai do Cascão'
+
+    def san(self):
+        return 'Sansão'
