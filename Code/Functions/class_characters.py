@@ -7,6 +7,8 @@ class characters:
         self.figurante_number = 0
         self.child_number = 0
 
+        self.mau = 'Maurício de Souza'
+        
         # TDM
         self.mon = 'Mônica'
         self.ceb = 'Cebolinha'
@@ -36,6 +38,20 @@ class characters:
         self.bor = 'Bóris'
         self.dud = 'Dudu'
         self.mdud = 'Mãe do Dudu'
+        self.marceb = 'Maria Cebolinha'
+        self.con = 'Do Contra'
+        self.hum = 'Humberto'
+        self.manf = 'Manfredo'
+        self.tv = 'Teveluisão'
+        self.blo = 'Bloguinho'
+        self.mtv = 'Mãe do Teveluisão'
+        self.nim = 'Nimbus'
+        self.jer = 'Jeremias'
+        self.carfru = 'Carminha Frufru'
+        self.anj = 'Anjinho'
+        self.spa = 'São Paulo'
+        self.quin = 'Quinzinho'
+        self.lou = 'Louco'
 
         # turma do Penadinho
         self.pen = 'Penadinho'
@@ -46,6 +62,7 @@ class characters:
         self.alm = 'Alminha'
         self.cav = 'Zé Caveirinha'
         self.cra = 'Cranícola'
+        self.mor = 'Dona Morte'
 
         # chico bento
         self.chi = 'Chico Bento'
@@ -65,54 +82,75 @@ class characters:
 
         # piteco
         self.pit = 'Piteco'
+        self.var = 'Vartolo'
+        self.bol = 'Bolota'
 
         # astronauta
         self.ast = 'Astronauta'
+
+        # papa-capim
+        self.pap = 'Papa-Capim'
+        self.cai = 'Caiapopó'
+        self.paj = 'Pajé'
+        self.cac = 'Cacique'
+
+        # jotalhão
+        self.jot = 'Jotalhão'
     
-    def atend(self, reset = False, n = 0):
+    def atend(self, reset = False, n = 0, add = 0):
         if n != 0:
             return f'Atendente {n}'
         elif reset:
             self.atendent_number = 0
+        elif add != 0:
+            return f'Atendente {self.child_number + add}'
         else:
             self.atendent_number += 1
-            return f'Atendente {self.atendent_number}'
+            return f'Atendente {self.atendent_number + add}'
     
-    def fat(self, reset = False, n = 0):
+    def fat(self, reset = False, n = 0, add = 0):
         if n != 0:
             return f'Pai {n}'
         elif reset:
             self.father_number = 0
+        elif add != 0:
+            return f'Pai {self.child_number + add}'
         else:
             self.father_number += 1
-            return f'Pai {self.father_number}'
+            return f'Pai {self.father_number + add}'
     
-    def mot(self, reset = False, n = 0):
+    def mot(self, reset = False, n = 0, add = 0):
         if n != 0:
             return f'Mãe {n}'
         elif reset:
             self.mother_number = 0
+        elif add != 0:
+            return f'Mãe {self.child_number + add}'
         else:
             self.mother_number += 1
-            return f'Mãe {self.mother_number}'
+            return f'Mãe {self.mother_number + add}'
 
-    def fig(self, reset = False, n = 0):
+    def fig(self, reset = False, n = 0, add = 0):
         if n != 0:
             return f'Figurante {n}'
         elif reset:
-            self.figurante_number = 1
+            self.figurante_number = 0
+        elif add != 0:
+            return f'Figurante {self.child_number + add}'
         else:
             self.figurante_number += 1
-            return f'Figurante {self.figurante_number}'
+            return f'Figurante {self.figurante_number + add}'
     
-    def child(self, reset = False, n = 0):
+    def child(self, reset = False, n = 0, add = 0):
         if n != 0:
             return f'Criança {n}'
         elif reset:
             self.child_number = 0
+        elif add != 0:
+            return f'Criança {self.child_number + add}'
         else:
             self.child_number += 1
-            return f'Criança {self.child_number}'
+            return f'Criança {self.child_number + add}'
 
 '''
     def mon(self):
