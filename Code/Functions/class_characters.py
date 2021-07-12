@@ -1,46 +1,120 @@
 class characters:
     def __init__(self):
+        # auxiliares para contagem
         self.atendent_number = 0
         self.father_number = 0
         self.mother_number = 0
         self.figurante_number = 0
         self.child_number = 0
+
+        # TDM
+        self.mon = 'Mônica'
+        self.ceb = 'Cebolinha'
+        self.cas = 'Cascão'
+        self.mag = 'Magali'
+        self.moca = 'Monicão'
+        self.floq = 'Floquinho'
+        self.chov = 'Chovenista'
+        self.min = 'Mingau'
+        self.xav = 'Xaveco'
+        self.franj = 'Franjinha'
+        self.mmon = 'Mãe da Mônica'
+        self.pmon = 'Pai da Mônica'
+        self.mceb = 'Dona Cebola'
+        self.pceb = 'Seu Cebola'
+        self.mmag = 'Mãe da Magali'
+        self.pmag = 'Pai da Magali'
+        self.mcas = 'Mãe do Cascão'
+        self.pcas = 'Pai do Cascão'
+        self.san = 'Sansão'
+        self.bid = 'Bidu'
+        self.luc = 'Luca'
+        self.den = 'Denise'
+        self.pxav = 'Pai do Xaveco'
+        self.mar = 'Marina'
+        self.viv = 'Bruxa Viviane'
+        self.bor = 'Bóris'
+        self.dud = 'Dudu'
+        self.mdud = 'Mãe do Dudu'
+
+        # turma do Penadinho
+        self.pen = 'Penadinho'
+        self.fra = 'Frank'
+        self.mum = 'Muminho'
+        self.vam = 'Zé Vampir'
+        self.lob = 'Lobi'
+        self.alm = 'Alminha'
+        self.cav = 'Zé Caveirinha'
+        self.cra = 'Cranícola'
+
+        # chico bento
+        self.chi = 'Chico Bento'
+        self.ros = 'Rosinha'
+        self.pro = 'Dona Marocas'
+        self.pad = 'Padre Lino'
+        self.mchi = 'Dona Cotinha'
+        self.nho = 'Nhô Lau'
+        self.lel = 'Zé Lelé'
+        self.mlel = 'Mãe do Zé Lelé'
+
+        # tina
+        self.rol = 'Rolo'
+        self.tin = 'Tina'
+        self.pip = 'Pipa'
+        self.ser = 'Serginho'
+
+        # piteco
+        self.pit = 'Piteco'
+
+        # astronauta
+        self.ast = 'Astronauta'
     
-    def atend(self, reset = False):
-        if reset:
-            self.atendent_number = 1
+    def atend(self, reset = False, n = 0):
+        if n != 0:
+            return f'Atendente {n}'
+        elif reset:
+            self.atendent_number = 0
         else:
             self.atendent_number += 1
-        return f'Atendente {self.atendent_number}'
+            return f'Atendente {self.atendent_number}'
     
-    def fat(self, reset = False):
-        if reset:
-            self.father_number = 1
+    def fat(self, reset = False, n = 0):
+        if n != 0:
+            return f'Pai {n}'
+        elif reset:
+            self.father_number = 0
         else:
             self.father_number += 1
-        return f'Pai {self.father_number}'
+            return f'Pai {self.father_number}'
     
-    def mot(self, reset = False):
-        if reset:
-            self.mother_number = 1
+    def mot(self, reset = False, n = 0):
+        if n != 0:
+            return f'Mãe {n}'
+        elif reset:
+            self.mother_number = 0
         else:
             self.mother_number += 1
-        return f'Mãe {self.mother_number}'
+            return f'Mãe {self.mother_number}'
 
-    def fig(self, reset = False):
-        if reset:
+    def fig(self, reset = False, n = 0):
+        if n != 0:
+            return f'Figurante {n}'
+        elif reset:
             self.figurante_number = 1
         else:
             self.figurante_number += 1
-        return f'Figurante {self.figurante_number}'
+            return f'Figurante {self.figurante_number}'
     
-    def child(self, reset = False):
-        if reset:
-            self.child_number = 1
+    def child(self, reset = False, n = 0):
+        if n != 0:
+            return f'Criança {n}'
+        elif reset:
+            self.child_number = 0
         else:
             self.child_number += 1
-        return f'Criança {self.child_number}'
+            return f'Criança {self.child_number}'
 
+'''
     def mon(self):
         return 'Mônica'
 
@@ -94,3 +168,4 @@ class characters:
 
     def san(self):
         return 'Sansão'
+'''
