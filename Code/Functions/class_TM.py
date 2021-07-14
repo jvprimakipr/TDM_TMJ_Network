@@ -36,3 +36,8 @@ class TM:
         self.data = pd.read_csv(path,
                                 index_col = 'Page',
                                 keep_default_na = False)
+        for row in self.data.iterrows():
+            for character in row[1]:
+                if character != '' and character not in self.characters:
+                    self.characters.append(character)
+                    self.n_characters += 1
