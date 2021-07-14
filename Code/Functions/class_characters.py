@@ -21,24 +21,24 @@ class characters:
         self.min = 'Mingau'
         self.xav = 'Xaveco'
         self.franj = 'Franjinha'
-        self.mmon = 'Mãe da Mônica'
-        self.pmon = 'Pai da Mônica'
+        self.mmon = 'Dona Luísa'
+        self.pmon = 'Seu Souza'
         self.mceb = 'Dona Cebola'
         self.pceb = 'Seu Cebola'
-        self.mmag = 'Mãe da Magali'
-        self.pmag = 'Pai da Magali'
-        self.mcas = 'Mãe do Cascão'
-        self.pcas = 'Pai do Cascão'
+        self.mmag = 'Dona Lili'
+        self.pmag = 'Seu Carlito'
+        self.mcas = 'Dona Lurdinha'
+        self.pcas = 'Seu Antenor'
         self.san = 'Sansão'
         self.bid = 'Bidu'
         self.luc = 'Luca'
         self.den = 'Denise'
-        self.pxav = 'Pai do Xaveco'
+        self.pxav = 'Seu Xavier'
         self.mar = 'Marina'
         self.viv = 'Bruxa Viviane'
         self.bor = 'Bóris'
         self.dud = 'Dudu'
-        self.mdud = 'Mãe do Dudu'
+        self.mdud = 'Dona Cecília'
         self.marceb = 'Maria Cebolinha'
         self.con = 'Do Contra'
         self.hum = 'Humberto'
@@ -75,7 +75,7 @@ class characters:
         self.mchi = 'Dona Cotinha'
         self.nho = 'Nhô Lau'
         self.lel = 'Zé Lelé'
-        self.mlel = 'Mãe do Zé Lelé'
+        self.mlel = 'Dona Lalá'
         self.gen = 'Genesinho'
 
         # tina
@@ -91,6 +91,8 @@ class characters:
 
         # astronauta
         self.ast = 'Astronauta'
+        self.mast = 'Natalina'
+        self.past = 'Astrogildo'
 
         # papa-capim
         self.pap = 'Papa-Capim'
@@ -98,7 +100,7 @@ class characters:
         self.paj = 'Pajé'
         self.cac = 'Cacique'
 
-        # jotalhão
+        # turma da mata
         self.jot = 'Jotalhão'
     
     def atend(self, reset = False, n = 0, add = 0):
@@ -111,7 +113,7 @@ class characters:
         else:
             self.atendent_number += 1
             return f'Atendente {self.atendent_number + add} - {self.comic_book}'
-    
+
     def fat(self, reset = False, n = 0, add = 0):
         if n != 0:
             return f'Pai {n} - {self.comic_book}'
@@ -155,59 +157,3 @@ class characters:
         else:
             self.child_number += 1
             return f'Criança {self.child_number + add} - {self.comic_book}'
-
-'''
-    def mon(self):
-        return 'Mônica'
-
-    def ceb(self):
-        return 'Cebolinha'
-
-    def cas(self):
-        return 'Cascão'
-
-    def mag(self):
-        return 'Magali'
-
-    def moca(self):
-        return 'Monicão'
-
-    def floq(self):
-        return 'Floquinho'
-
-    def chov(self):
-        return 'Chovenista'
-
-    def xav(self):
-        return 'Xaveco'
-
-    def franj(self):
-        return 'Franjinha'
-
-    def mmon(self):
-        return 'Mãe da Mônica'
-
-    def pmon(self):
-        return 'Pai da Mônica'
-
-    def mceb(self):
-        return 'Dona Cebola'
-
-    def pceb(self):
-        return 'Seu Cebola'
-
-    def mmag(self):
-        return 'Mãe da Magali'
-
-    def pmag(self):
-        return 'Pai da Magali'
-
-    def mcas(self):
-        return 'Mãe do Cascão'
-
-    def pcas(self):
-        return 'Pai do Cascão'
-
-    def san(self):
-        return 'Sansão'
-'''
