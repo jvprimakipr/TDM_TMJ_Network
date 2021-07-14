@@ -52,6 +52,8 @@ class characters:
         self.spa = 'São Paulo'
         self.quin = 'Quinzinho'
         self.lou = 'Louco'
+        self.ali = 'Alice'
+        self.lui = 'Zé Luís'
 
         # turma do Penadinho
         self.pen = 'Penadinho'
@@ -73,6 +75,7 @@ class characters:
         self.nho = 'Nhô Lau'
         self.lel = 'Zé Lelé'
         self.mlel = 'Mãe do Zé Lelé'
+        self.gen = 'Genesinho'
 
         # tina
         self.rol = 'Rolo'
