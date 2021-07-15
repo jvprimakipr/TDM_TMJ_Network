@@ -29,6 +29,10 @@ class TM:
     
         return self.data
 
+    def inserts(self, multiple_inserting):
+        for inserting in multiple_inserting:
+            self.insert(inserting)
+    
     def pack(self, path):
         self.data.to_csv(path)
 

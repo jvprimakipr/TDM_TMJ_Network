@@ -1,13 +1,15 @@
 class characters:
     def __init__(self):
+        self.comic_book = ''
+        
         # auxiliares para contagem
-        self.figurante_number = 0
-        self.atendent_number = 0
+        self.figurant_number = 0
+        self.shade_number = 0
+        self.attendant_number = 0
         self.father_number = 0
         self.mother_number = 0        
         self.child_number = 0
-        self.comic_book = ''
-
+        
         # God
         self.mau = 'Maurício de Souza'
         
@@ -84,19 +86,28 @@ class characters:
         self.cap = 'Capitão Feio'
         self.viv = 'Bruxa Viviane'
         self.dou = 'Professor Spada / Doutor Spam'
+        self.cab = 'Cabeleira Negra'
+        self.lor = 'Lorde Coelhão'
         self.yuk = 'Yuka'
+        self.ark = 'Arkanum'
+        self.kra = 'Kraker'
         
         # Adultos (em geral)
         self.lou = 'Louco'
         self.juc = 'Seu Juca'
         self.fal = 'Prof Falconi'
+        self.van = 'Vanda'
+        self.val = 'Valéria'
         
-        #Seres míticos
+        #Seres Míticos
         self.ebor = 'Bóreas'
         self.ezep = 'Zephyrus'
         self.eeur = 'Euros'
         self.enot = 'Notus'
         self.spa = 'São Paulo'
+        
+        #Seres Tecnológicos
+        self.rob = 'Robóris'
         
         # Vida Real
         self.ali = 'Alice'
@@ -182,6 +193,7 @@ class characters:
         ###############################
         
         self.ast = 'Astronauta'
+        self.com = 'Computador'
         self.rit = 'Ritinha'
         self.mast = 'Natalina'
         self.past = 'Astrogildo'
@@ -209,64 +221,76 @@ class characters:
         self.rei = 'Rei Leonino'
         self.cax = 'Luís Caxeiro'
     
-    def fig(self, reset = False, n = 0, add = 0):
+    def fig(self, n = 0, add = '', reset = False):
         if n != 0:
             return f'Figurante {n} - {self.comic_book}'
+        elif add != '':
+            return f'Figurante {self.figurant_number + add} - {self.comic_book}'
         elif reset:
-            self.figurante_number = 0
-        elif add != 0:
-            return f'Figurante {self.child_number + add} - {self.comic_book}'
+            self.figurant_number = 0
         else:
-            self.figurante_number += 1
-            return f'Figurante {self.figurante_number + add} - {self.comic_book}'
+            self.figurant_number += 1
+            return f'Figurante {self.figurant_number} - {self.comic_book}'
+        
+    def shade(self, n = 0, add = '', reset = False):
+        if n != 0:
+            return f'Sombra {n} - {self.comic_book}'
+        elif add != '':
+            return f'Sombra {self.shade_number + add} - {self.comic_book}'
+        elif reset:
+            self.shade_number = 0
+        else:
+            self.shade_number += 1
+            return f'Sombra {self.shade_number} - {self.comic_book}'
     
-    def atend(self, reset = False, n = 0, add = 0):
+    def att(self, n = 0, add = '', reset = False):
         if n != 0:
             return f'Atendente {n} - {self.comic_book}'
+        elif add != '':
+            return f'Atendente {self.attendant_number + add} - {self.comic_book}'
         elif reset:
-            self.atendent_number = 0
-        elif add != 0:
-            return f'Atendente {self.child_number + add} - {self.comic_book}'
+            self.attendant_number = 0
         else:
-            self.atendent_number += 1
-            return f'Atendente {self.atendent_number + add} - {self.comic_book}'
+            self.attendant_number += 1
+            return f'Atendente {self.attendant_number} - {self.comic_book}'
 
-    def fat(self, reset = False, n = 0, add = 0):
+    def fat(self, n = 0, add = '', reset = False):
         if n != 0:
             return f'Pai {n} - {self.comic_book}'
+        elif add != '':
+            return f'Pai {self.father_number + add} - {self.comic_book}'
         elif reset:
             self.father_number = 0
-        elif add != 0:
-            return f'Pai {self.child_number + add} - {self.comic_book}'
         else:
             self.father_number += 1
-            return f'Pai {self.father_number + add} - {self.comic_book}'
+            return f'Pai {self.father_number} - {self.comic_book}'
     
-    def mot(self, reset = False, n = 0, add = 0):
+    def mot(self, n = 0, add = '', reset = False):
         if n != 0:
             return f'Mãe {n} - {self.comic_book}'
+        elif add != '':
+            return f'Mãe {self.mother_number + add} - {self.comic_book}'
         elif reset:
             self.mother_number = 0
-        elif add != 0:
-            return f'Mãe {self.child_number + add} - {self.comic_book}'
         else:
             self.mother_number += 1
-            return f'Mãe {self.mother_number + add} - {self.comic_book}'
+            return f'Mãe {self.mother_number} - {self.comic_book}'
     
-    def child(self, reset = False, n = 0, add = 0):
+    def child(self, n = 0, add = '', reset = False):
         if n != 0:
             return f'Criança {n} - {self.comic_book}'
+        elif add != '':
+            return f'Criança {self.child_number + add} - {self.comic_book}'
         elif reset:
             self.child_number = 0
-        elif add != 0:
-            return f'Criança {self.child_number + add} - {self.comic_book}'
         else:
             self.child_number += 1
-            return f'Criança {self.child_number + add} - {self.comic_book}'
+            return f'Criança {self.child_number} - {self.comic_book}'
 
     def reset(self):
         self.fig(reset = True)
-        self.atend(reset = True)
+        self.shade(reset = True)
+        self.att(reset = True)
         self.mot(reset = True)
         self.fat(reset = True)
         self.child(reset = True)
