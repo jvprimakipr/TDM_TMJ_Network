@@ -31,6 +31,7 @@ class characters:
         self.xim = 'Ximbuca'
         self.bor = 'Bóris'
         self.manf = 'Manfredo'
+        self.ave = 'Aveia'
         
         # Secundários (Masculino)
         self.franj = 'Franjinha'
@@ -75,14 +76,26 @@ class characters:
         self.mtv = 'Mãe do Teveluisão'
         
         # Tios(as), Avôs(ós)
-        self.tnen = 'Tia Nena
+        self.tnen = 'Tia Nena'
         self.tpep = 'Tio Pepo'
         self.vxep = 'Vó Xepa'
+        
+        # Vilões
+        self.cap = 'Capitão Feio'
+        self.viv = 'Bruxa Viviane'
+        self.dou = 'Professor Spada / Doutor Spam'
+        self.yuk = 'Yuka'
         
         # Adultos (em geral)
         self.lou = 'Louco'
         self.juc = 'Seu Juca'
-        self.viv = 'Bruxa Viviane'
+        self.fal = 'Prof Falconi'
+        
+        #Seres míticos
+        self.ebor = 'Bóreas'
+        self.ezep = 'Zephyrus'
+        self.eeur = 'Euros'
+        self.enot = 'Notus'
         self.spa = 'São Paulo'
         
         # Vida Real
@@ -160,7 +173,7 @@ class characters:
 
         # Dinossauros
         self.hor = 'Horácio'
-        self.luc = 'Lucinda'
+        self.luci = 'Lucinda'
         self.tec = 'Tecodonte'
         self.sim = 'Simone'
         
@@ -250,3 +263,10 @@ class characters:
         else:
             self.child_number += 1
             return f'Criança {self.child_number + add} - {self.comic_book}'
+
+    def reset(self):
+        self.fig(reset = True)
+        self.atend(reset = True)
+        self.mot(reset = True)
+        self.fat(reset = True)
+        self.child(reset = True)
