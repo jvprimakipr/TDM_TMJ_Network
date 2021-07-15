@@ -85,7 +85,7 @@ class characters:
         # Vilões
         self.cap = 'Capitão Feio'
         self.viv = 'Bruxa Viviane'
-        self.dou = 'Professor Spada / Doutor Spam'
+        self.spa = 'Professor Spada / Doutor Spam'
         self.cab = 'Cabeleira Negra'
         self.lor = 'Lorde Coelhão'
         self.yuk = 'Yuka'
@@ -104,7 +104,7 @@ class characters:
         self.ezep = 'Zephyrus'
         self.eeur = 'Euros'
         self.enot = 'Notus'
-        self.spa = 'São Paulo'
+        self.spau = 'São Paulo'
         
         #Seres Tecnológicos
         self.rob = 'Robóris'
@@ -189,12 +189,12 @@ class characters:
         self.sim = 'Simone'
         
         ###############################
-        #### TURMA DO AASTRONAUTA #####
+        ##### TURMA DO ASTRONAUTA #####
         ###############################
         
         self.ast = 'Astronauta'
-        self.com = 'Computador'
         self.rit = 'Ritinha'
+        self.comp = 'Computador'
         self.mast = 'Natalina'
         self.past = 'Astrogildo'
 
