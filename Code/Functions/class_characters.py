@@ -38,7 +38,7 @@ class characters:
         # Secundários (Masculino)
         self.franj = 'Franjinha'
         self.xav = 'Xaveco'
-        self.con = 'Do Contra'
+        self.doc = 'Do Contra'
         self.nim = 'Nimbus'
         self.dud = 'Dudu'
         self.luc = 'Luca'
@@ -231,7 +231,13 @@ class characters:
         else:
             self.figurant_number += 1
             return f'Figurante {self.figurant_number} - {self.comic_book}'
-        
+    
+    def figs(self, n):
+        figs = []
+        for i in range(n):
+            figs.append(self.fig())
+        return figs
+    
     def shade(self, n = 0, add = '', reset = False):
         if n != 0:
             return f'Sombra {n} - {self.comic_book}'
@@ -242,6 +248,12 @@ class characters:
         else:
             self.shade_number += 1
             return f'Sombra {self.shade_number} - {self.comic_book}'
+    
+    def shades(self, n):
+        shades = []
+        for i in range(n):
+            shades.append(self.shade())
+        return shades
     
     def att(self, n = 0, add = '', reset = False):
         if n != 0:
