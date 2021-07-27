@@ -9,7 +9,7 @@ pages9 = [[c.beg, c.ceb, c.cas, c.mon, 'Cebolinha do Futuro', c.end],
           [],
           [c.ceb, c.cas, c.mon, 'Cebolinha do Futuro'],
           [c.beg, c.cas, c.ceb],
-          [c.cas, c.ceb, c.fat(), c.child(), c.child(), c.child(), c.child(). c.fig(), 'Cebolinha do Futuro'],
+          [c.cas, c.ceb, c.fat(), c.child(), c.child(), c.child(), c.child(), c.fig(), 'Cebolinha do Futuro'],
           [c.cas, 'Cebolinha do Futuro', c.child()],
           [c.cas, c.ceb, 'Cebolinha do Futuro'],
           [c.ceb, 'Cebolinha do Futuro'],
@@ -70,4 +70,4 @@ pages9 = [[c.beg, c.ceb, c.cas, c.mon, 'Cebolinha do Futuro', c.end],
           [c.mon, c.luc, c.ceb, 'Marimbondo'], #PRIMAKI
           [c.mon],
           [c.mon, c.mau, c.end], # maurício ficava fazendo as perguntas em quadradinhos no canto superior esquerdo, devo incluir ele?
-          [c.beg, c,mon, c.moca, c.luc, c.mag, c.end]] # tirinha final
+          [c.beg, c.mon, c.moca, c.luc, c.mag, c.end]] # tirinha final
