@@ -67,7 +67,7 @@ pages9 = [[c.beg, c.ceb, c.cas, c.mon, 'Cebolinha do Futuro', c.end],
           [c.mon, c.pmon, c.mmon, c.moca, c.san],
           [c.mon, c.cas, c.ceb, c.san, c.carfru], # cascão e cebolinha só em fala
           [c.mon, c.mag, c.carfru],
-          [c.mon, c.luc, c.ceb, 'Marimbondo'], #PRIMAKI
+          [c.mon, c.luc, c.ceb, 'Marimbondo', 'Alfacinho', 'Fabinho Boa Pinta'], #PRIMAKI
           [c.mon],
           [c.mon, c.mau, c.end], # maurício ficava fazendo as perguntas em quadradinhos no canto superior esquerdo, devo incluir ele?
           [c.beg, c.mon, c.moca, c.luc, c.mag, c.end]] # tirinha final

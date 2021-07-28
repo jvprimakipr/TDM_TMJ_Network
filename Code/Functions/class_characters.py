@@ -39,6 +39,8 @@ class characters:
         self.bor = 'Bóris'
         self.manf = 'Manfredo'
         self.ave = 'Aveia'
+        self.duq = 'Duque'
+        self.zesq = 'Zé Esquecido'
         
         # Secundários (Masculino)
         self.franj = 'Franjinha'

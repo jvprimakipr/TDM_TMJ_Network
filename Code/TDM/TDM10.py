@@ -30,12 +30,12 @@ pages10 = [[c.beg, c.cas, c.ceb, c.end],
 	   [c.san, c.cas, c.ceb, c.mon] + c.shades(6) + [c.end], # end no final só por padrão meu mesmo, mas poderia ser no meio ;-)
 	   [c.beg, c.chi, c.child(), 'Cachorro', c.gis, c.mim, c.tor, 'Burro', 'Onça', 'Pássaro 1', 'Pássaro 2', 'Pássaro 3', 'Borboleta', c.end],
 	   [],
-	   [c.beg, c.bid, 'Zé Esquecido'],
-	   [c.bid, 'Zé Esquecido'],
-	   ['Zé Esquecido', c.child()],
-	   ['Zé Esquecido', 'Passarinho Amarelo'],
-	   ['Zé Esquecido', 'Passarinho Amarelo', c.bid],
-	   ['Zé Esquecido', c.bid, 'Cachorro que não me é estranho', c.end], #PRIMAKI, help
+	   [c.beg, c.bid, c.zesq],
+	   [c.bid, c.zesq],
+	   [c.zesq, c.child()],
+	   [c.zesq, 'Passarinho Amarelo'],
+	   [c.zesq, 'Passarinho Amarelo', c.bid],
+	   [c.zesq, c.bid, c.duq, c.end], #PRIMAKI, help
 	   [c.beg, c.cra, c.end],
 	   [],
 	   [], # [c.anj, c.mceb, c.marceb, c.mon, c.cas], # correio
