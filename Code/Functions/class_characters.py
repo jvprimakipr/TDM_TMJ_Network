@@ -303,6 +303,12 @@ class characters:
         else:
             self.child_number += 1
             return f'Criança {self.child_number} - {self.comic_book}'
+    
+    def kids(self, n):
+        kids = []
+        for i in range(n):
+            kids.append(self.child())
+        return kids
 
     def reset(self):
         self.fig(reset = True)
