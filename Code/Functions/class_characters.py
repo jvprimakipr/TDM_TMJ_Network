@@ -58,6 +58,9 @@ class characters:
         self.zlui = 'Zé Luís'
         self.blo = 'Bloguinho'
         self.tv = 'Teveluisão'
+        self.fabbp = 'Fabinho Boa Pinta'
+        self.ric = 'Ricardinho'
+        self.ber = 'Bernardinho'
         
         # Secundárias (Feminino)
         self.den = 'Denise'
