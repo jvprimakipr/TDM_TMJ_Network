@@ -41,6 +41,7 @@ class characters:
         self.ave = 'Aveia'
         self.duq = 'Duque'
         self.zesq = 'Zé Esquecido'
+        self.bug = 'Bugu'
         
         # Secundários (Masculino)
         self.franj = 'Franjinha'
