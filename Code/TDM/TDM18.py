@@ -8,7 +8,7 @@ c.comic_book = 'gibi 18'
 pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [],
 		   [c.mon, c.mag, c.cas, 'Neto do Franjinha'],
-		   [c.beg, c.mag, c.franj]
+		   [c.beg, c.mag, c.franj],
 		   [c.mag, c.franj, 'Fran J. Inha', 'Monika Bond', 'Maga Rári'], # os três últimos só em imagem no computador
 		   [c.mag, c.franj, 'Monika Bond', 'Maga Rári'], # as duas últimas na tela do computador (imagem)
 		   [c.mag, 'Monika Bond', 'Robô carregando malas 1', 'Robô carregando malas 2', 'Abelha', 'Bidutronic'],

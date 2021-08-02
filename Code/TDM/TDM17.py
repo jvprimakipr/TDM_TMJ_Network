@@ -28,7 +28,7 @@ pages17 = [[c.beg, c.ceb, c.san, c.cas] + c.figs(17) + [c.end], # figurantes sã
 		   [c.cas, c.ceb, c.san, c.mon, c.mag],
 		   [c.cas, c.ceb, c.child(), c.shade(), c.shade()],
 		   [c.cas, c.ceb],
-		   [c.ceb, c.fat(), c.fat(), 'Gnomo do Papai Noel 1', 'Gnomo do Papai Noel 2', 'Gnomo do Papai Noel 3'] + c.kids(7) + c.shades(14)),
+		   [c.ceb, c.fat(), c.fat(), 'Gnomo do Papai Noel 1', 'Gnomo do Papai Noel 2', 'Gnomo do Papai Noel 3'] + c.kids(7) + c.shades(14),
 		   [c.ceb, c.san, c.fat(), c.child()] + c.shades(4),
 		   [c.ceb, c.san, c.mon],
 		   [c.ceb, c.mon, 'Papai Noel', 'Gnomo do Papai Noel 4', c.fig()] + c.shades(12) + [c.end],
