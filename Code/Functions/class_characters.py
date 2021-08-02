@@ -154,6 +154,7 @@ class characters:
         self.hir = 'Hiro'
         self.pzec = 'Primo Zeca'
         self.gen = 'Genesinho'
+        self.marcaf = 'Maria Cafufa'
         
         # Adultos
         self.mchi = 'Dona Cotinha'
