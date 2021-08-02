@@ -42,6 +42,7 @@ class characters:
         self.duq = 'Duque'
         self.zesq = 'Zé Esquecido'
         self.bug = 'Bugu'
+        self.rad = 'Radar' # cão-guia da Dorinha
         
         # Secundários (Masculino)
         self.franj = 'Franjinha'
