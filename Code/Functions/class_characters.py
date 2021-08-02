@@ -90,6 +90,7 @@ class characters:
         self.pdud = 'Seu Durval'
         self.mtv = 'Mãe do Teveluisão'
         self.mdor = 'Mãe da Dorinha'
+        self.mdoc = 'Mãe do Do Contra / Nimbus'
         
         # Tios(as), Avôs(ós)
         self.tnen = 'Tia Nena'
