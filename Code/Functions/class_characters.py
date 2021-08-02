@@ -63,6 +63,7 @@ class characters:
         self.fabbp = 'Fabinho Boa Pinta'
         self.ric = 'Ricardinho'
         self.ber = 'Bernardinho'
+        self.nicdem = 'Nico Demo'
         
         # Secundárias (Feminino)
         self.den = 'Denise'
