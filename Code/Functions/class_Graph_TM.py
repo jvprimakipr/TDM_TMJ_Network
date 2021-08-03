@@ -62,12 +62,14 @@ class Graph_TM:
                      filename = ''):
         
         connected_components = list(nx.connected_components(self.Graph))
-        if len(connected_components) > max_connected_components:
+        if type(max_connected_components) == int and len(connected_components) > max_connected_components:
             subgraph_nodes = connected_components[0]
             for connected_component in connected_components[1:max_connected_components]:
                 subgraph_nodes = subgraph_nodes.union(connected_component)
                 
             G = nx.subgraph(self.Graph, subgraph_nodes)
+        elif max_connected_components == 'all':
+        	G = self.Graph
         else:
             G = self.Graph
         
