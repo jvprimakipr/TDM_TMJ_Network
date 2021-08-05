@@ -1,11 +1,13 @@
 import networkx as nx
-from Functions.class_TM import TM
 import matplotlib.pyplot as plt
+import networkx.algorithms.community as nxcom
+from Functions.class_TM import TM
 
 class Graph_TM:
     def __init__(self):
         self.Graph = nx.Graph()
         self.edges2add = []
+        self.communities = None
         
     def data2insert(self, file):
         cb = TM()
@@ -55,7 +57,7 @@ class Graph_TM:
                      k = 0.001,
                      max_width = 10,
                      max_node_size = 100,
-                     plot_size = (15, 8),
+                     plot_size = (15, 10),
                      highlight = ['Mônica', 'Cebolinha', 'Cascão', 'Magali', 'Chico Bento'],
                      highlight_color = 'red',
                      max_connected_components = 1,
@@ -69,7 +71,7 @@ class Graph_TM:
                 
             G = nx.subgraph(self.Graph, subgraph_nodes)
         elif max_connected_components == 'all':
-        	G = self.Graph
+            G = self.Graph
         else:
             G = self.Graph
         
@@ -100,5 +102,99 @@ class Graph_TM:
                 node_size = node_size)
         
         if filename != '':
-            plt.savefig('../TeX/img/{}.png'.format(filename))
-            print('Graph saved as ../TeX/img/{}.png'.format(filename))
+            plt.savefig(f'../TeX/img/{filename}.png')
+            print(f'Graph saved as ../TeX/img/{filename}.png')
+
+    def find_communities(self):
+        self.communities = sorted(nxcom.greedy_modularity_communities(self.Graph), key = len, reverse = True)
+        
+        return self.communities
+    
+    '''Next 3 functions are from https://orbifold.net/default/community-detection-using-networkx/'''
+    def set_node_community(self):
+        '''Add community to node attributes'''
+        if self.communities == None:
+            _ = self.find_communities()
+        for c, v_c in enumerate(self.communities):
+            for v in v_c:
+                # Add 1 to save 0 for external edges
+                self.Graph.nodes[v]['community'] = c + 1
+
+    def set_edge_community(self):
+        '''Find internal edges and add their community to their attributes'''
+        for v, w, in self.Graph.edges:
+            if self.Graph.nodes[v]['community'] == self.Graph.nodes[w]['community']:
+                # Internal edge, mark with community
+                self.Graph.edges[v, w]['community'] = self.Graph.nodes[v]['community']
+            else:
+                # External edge, mark as 0
+                self.Graph.edges[v, w]['community'] = 0
+
+    def get_color(self, i, r_off = 1, g_off = 1, b_off = 1):
+        '''Assign a color to a vertex.'''
+        r0, g0, b0 = 0, 0, 0
+        n = 16
+        low, high = 0.1, 0.9
+        span = high - low
+        r = low + span * (((i + r_off) * 3) % n) / (n - 1)
+        g = low + span * (((i + g_off) * 5) % n) / (n - 1)
+        b = low + span * (((i + b_off) * 7) % n) / (n - 1)
+        return (r, g, b)
+    
+    '''Next function is for plotting using the above functions (using same reference)'''
+    def plot_communities(self,
+                         edge_color = 'darkgray',
+                         k = 0.001,
+                         width = 0.01,
+                         node_size = 3,
+                         plot_size = (15, 10),
+                         max_connected_components = 1,
+                         filename = ''):
+        if self.communities == None:
+            _ = self.find_communities()
+        
+        G = Graph_TM()
+        connected_components = list(nx.connected_components(self.Graph))
+        if type(max_connected_components) == int and len(connected_components) > max_connected_components:
+            subgraph_nodes = connected_components[0]
+            for connected_component in connected_components[1:max_connected_components]:
+                subgraph_nodes = subgraph_nodes.union(connected_component)
+                
+            G.Graph = nx.subgraph(self.Graph, subgraph_nodes)
+        elif max_connected_components == 'all':
+            G.Graph = self.Graph
+        else:
+            G.Graph = self.Graph        
+        
+        G.set_node_community()
+        G.set_edge_community()
+
+        node_color = [G.get_color(G.Graph.nodes[v]['community']) for v in G.Graph.nodes]
+        external = [(v, w) for v, w in G.Graph.edges if G.Graph.edges[v, w]['community'] == 0]
+        internal = [(v, w) for v, w in G.Graph.edges if G.Graph.edges[v, w]['community'] > 0]
+        internal_color = ['black' for e in internal]
+        plt.figure(figsize = plot_size)
+        pos = nx.spring_layout(G.Graph, k = k)
+        
+        nx.draw_networkx_edges(G.Graph,
+                               pos = pos,
+                               edgelist = external,
+                               width = width,
+                               edge_color = edge_color)
+        
+        nx.draw_networkx_edges(G.Graph,
+                               pos = pos,
+                               edgelist = internal,
+                               width = width,
+                               edge_color = edge_color)
+
+        nx.draw(G.Graph,
+                pos = pos,
+                node_color = node_color,
+                edge_color = edge_color,
+                node_size = node_size,
+                width = width)
+        
+        if filename != '':
+            plt.savefig(f'../TeX/img/{filename}.png')
+            print(f'Graph saved as ../TeX/img/{filename}.png')
