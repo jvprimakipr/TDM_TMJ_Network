@@ -3,15 +3,16 @@ import pandas as pd
 class TM:
     "Class for Turma da Mônica comic book"
     def __init__(self):
-        self.data = pd.DataFrame({'Page': ['Page 1'], 'History' : None})
+        self.data = pd.DataFrame({'Page': ['Page 1'], 'History' : None, 'Weight' : None})
         self.data.set_index('Page', inplace = True)
         self.characters = []
         self.n_characters = 0
         self.history = False
         self.n_history = -1
         self.end_history = False
+        self.subdivisions = 0
 
-    def insert(self, inserting):
+    def insert(self, inserting, w = 1, scene = ''):        
         if 'begin' in inserting:
             self.n_history += 1
             self.history = True
@@ -32,8 +33,10 @@ class TM:
             self.history = False
             self.end_history = False
             
-        for character in inserting:
-            if character not in self.characters and type(character) != int:
+        inserting.insert(1, w)
+            
+        for character in inserting[2:]:
+            if character not in self.characters:
                 self.characters.append(character)
                 self.n_characters += 1
         
@@ -48,13 +51,33 @@ class TM:
         if len(self.data) == 1 and self.data.loc['Page 1'][0] == None:
             self.data.loc['Page 1'] = inserting
         else:
-            self.data.loc[f'Page {len(self.data) + 1}'] = inserting
+            self.data.loc[f'Page {len(self.data) - self.subdivisions + 1}{scene}'] = inserting
     
         return self.data
 
+    def split_insert(self, inserting):
+        w = round(1/inserting[0], 1)
+        myaux = 1
+        for i in range(1, len(inserting)):
+            if isinstance(inserting[i], list):
+                if 'end' in inserting:
+                    inserting[i].insert(0, 'end')
+                if 'begin' in inserting:
+                    inserting[i].insert(0, 'begin')
+                if myaux != 1:
+                    self.subdivisions += 1
+                self.insert(inserting[i], w = w, scene = f'.{myaux}')
+                myaux += 1
+    
     def inserts(self, multiple_inserting):
         for inserting in multiple_inserting:
-            self.insert(inserting)
+            if len(inserting) > 0:
+                if isinstance(inserting[0], int):
+                    self.split_insert(inserting)
+                else:
+                    self.insert(inserting)
+            else:
+                self.insert(inserting)
     
     def pack(self, path):
         self.data.to_csv(path)
@@ -68,3 +91,4 @@ class TM:
                 if character != '' and character not in self.characters:
                     self.characters.append(character)
                     self.n_characters += 1
+    #Acho que talvez tenha q consertar algo aqui

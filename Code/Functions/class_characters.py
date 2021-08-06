@@ -1,19 +1,21 @@
 class characters:
     def __init__(self):
-        # auxiliar para diferenciar os gibis
+        # Auxiliar para diferenciar os gibis
         self.comic_book = ''
 
-        # auxiliares na marcação das histórias
+        # Auxiliares na marcação das histórias
         self.beg = 'begin'
         self.end = 'end'
         
-        # auxiliares para contagem
+        # Auxiliares para contagem
         self.figurant_number = 0
         self.shade_number = 0
         self.attendant_number = 0
         self.father_number = 0
         self.mother_number = 0        
         self.child_number = 0
+        self.crowd_number = 0
+        self.list_crowds = []
         
         # God
         self.mau = 'Maurício de Souza'
@@ -27,22 +29,6 @@ class characters:
         self.ceb = 'Cebolinha'
         self.mag = 'Magali'
         self.cas = 'Cascão'
-        
-        # Pets
-        self.san = 'Sansão'
-        self.moca = 'Monicão'
-        self.floq = 'Floquinho'
-        self.min = 'Mingau'
-        self.chov = 'Chovinista'
-        self.bid = 'Bidu'
-        self.xim = 'Ximbuca'
-        self.bor = 'Bóris'
-        self.manf = 'Manfredo'
-        self.ave = 'Aveia'
-        self.duq = 'Duque'
-        self.zesq = 'Zé Esquecido'
-        self.bug = 'Bugu'
-        self.rad = 'Radar' # cão-guia da Dorinha
         
         # Secundários (Masculino)
         self.franj = 'Franjinha'
@@ -126,6 +112,25 @@ class characters:
         
         # Vida Real
         self.ali = 'Alice'
+        
+        ###############################
+        ####### TURMA DOS PETS ########
+        ###############################
+        
+        self.san = 'Sansão'
+        self.moca = 'Monicão'
+        self.floq = 'Floquinho'
+        self.min = 'Mingau'
+        self.chov = 'Chovinista'
+        self.bid = 'Bidu'
+        self.xim = 'Ximbuca'
+        self.bor = 'Bóris'
+        self.manf = 'Manfredo'
+        self.ave = 'Aveia'
+        self.duq = 'Duque'
+        self.zesq = 'Zé Esquecido'
+        self.bug = 'Bugu'
+        self.rad = 'Radar'
         
         ###############################
         ##### TURMA DO PENADINHO ######
@@ -237,90 +242,95 @@ class characters:
         self.rei = 'Rei Leonino'
         self.cax = 'Luís Caxeiro'
     
+    # Adiciona um id em cada personagem genérico
+    def ID(self, name):
+        return self.comic_book + ' ' + name
+    
     def fig(self, n = 0, add = '', reset = False):
         if n != 0:
-            return f'Figurante {n} - {self.comic_book}'
+            return self.ID(f'Figurante {n}')
         elif add != '':
-            return f'Figurante {self.figurant_number + add} - {self.comic_book}'
+            return self.ID(f'Figurante {self.figurant_number + add}')
         elif reset:
             self.figurant_number = 0
         else:
             self.figurant_number += 1
-            return f'Figurante {self.figurant_number} - {self.comic_book}'
+            return self.ID(f'Figurante {self.figurant_number}')
     
     def figs(self, n):
-        figs = []
-        for i in range(n):
-            figs.append(self.fig())
-        return figs
+        return [self.fig() for i in range(n)]
     
     def shade(self, n = 0, add = '', reset = False):
         if n != 0:
-            return f'Sombra {n} - {self.comic_book}'
+            return self.ID(f'Sombra {n}')
         elif add != '':
-            return f'Sombra {self.shade_number + add} - {self.comic_book}'
+            return self.ID(f'Sombra {self.shade_number + add}')
         elif reset:
             self.shade_number = 0
         else:
             self.shade_number += 1
-            return f'Sombra {self.shade_number} - {self.comic_book}'
+            return self.ID(f'Sombra {self.shade_number}')
     
     def shades(self, n):
-        shades = []
-        for i in range(n):
-            shades.append(self.shade())
-        return shades
+        return [self.shade() for i in range(n)]
     
     def att(self, n = 0, add = '', reset = False):
         if n != 0:
-            return f'Atendente {n} - {self.comic_book}'
+            return self.ID(f'Atendente {n}')
         elif add != '':
-            return f'Atendente {self.attendant_number + add} - {self.comic_book}'
+            return self.ID(f'Atendente {self.attendant_number + add}')
         elif reset:
             self.attendant_number = 0
         else:
             self.attendant_number += 1
-            return f'Atendente {self.attendant_number} - {self.comic_book}'
+            return self.ID(f'Atendente {self.attendant_number}')
 
     def fat(self, n = 0, add = '', reset = False):
         if n != 0:
-            return f'Pai {n} - {self.comic_book}'
+            return self.ID(f'Pai {n}')
         elif add != '':
-            return f'Pai {self.father_number + add} - {self.comic_book}'
+            return self.ID(f'Pai {self.father_number + add}')
         elif reset:
             self.father_number = 0
         else:
             self.father_number += 1
-            return f'Pai {self.father_number} - {self.comic_book}'
+            return self.ID(f'Pai {self.father_number}')
     
     def mot(self, n = 0, add = '', reset = False):
         if n != 0:
-            return f'Mãe {n} - {self.comic_book}'
+            return self.ID(f'Mãe {n}')
         elif add != '':
-            return f'Mãe {self.mother_number + add} - {self.comic_book}'
+            return self.ID(f'Mãe {self.mother_number + add}')
         elif reset:
             self.mother_number = 0
         else:
             self.mother_number += 1
-            return f'Mãe {self.mother_number} - {self.comic_book}'
+            return self.ID(f'Mãe {self.mother_number}')
     
     def child(self, n = 0, add = '', reset = False):
         if n != 0:
-            return f'Criança {n} - {self.comic_book}'
+            return self.ID(f'Criança {n}')
         elif add != '':
-            return f'Criança {self.child_number + add} - {self.comic_book}'
+            return self.ID(f'Criança {self.child_number + add}')
         elif reset:
             self.child_number = 0
         else:
             self.child_number += 1
-            return f'Criança {self.child_number} - {self.comic_book}'
+            return self.ID(f'Criança {self.child_number}')
     
     def kids(self, n):
-        kids = []
-        for i in range(n):
-            kids.append(self.child())
-        return kids
+        return [self.child() for i in range(n)]
 
+    # Cria uma multidão, facilitando o acesso a muitos figurantes que se repetem em várias páginas
+    def crowd(self, n = 0, figs = 10):
+        if n == 0:
+            self.crowd_number += 1
+            crowd = [self.fig() for i in range(figs)]
+            self.list_crowds.append(crowd)
+            return crowd
+        else:
+            return self.list_crowds[n-1]
+    
     def reset(self):
         self.fig(reset = True)
         self.shade(reset = True)
