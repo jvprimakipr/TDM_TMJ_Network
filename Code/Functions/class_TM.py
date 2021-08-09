@@ -33,7 +33,9 @@ class TM:
             self.history = False
             self.end_history = False
             
-        inserting.insert(1, w)
+        if inserting[0] != '' or (len(inserting) > 1 and inserting[1] != ''):
+        	# entre parênteses é o caso da contracapa da TMJ
+        	inserting.insert(1, w) # adicionando o peso daquela página/cena
             
         for character in inserting[2:]:
             if character not in self.characters:
@@ -43,7 +45,7 @@ class TM:
         if len(inserting) > len(self.data.columns):
             while len(inserting) > len(self.data.columns):
                 new_column = ['' for i in range(len(self.data))]
-                self.data.insert(len(self.data.columns), f'Character {len(self.data.columns)}', new_column, True)
+                self.data.insert(len(self.data.columns), f'Character {len(self.data.columns) - 1}', new_column, True)
         elif len(inserting) < len(self.data.columns):
             while len(inserting) < len(self.data.columns):
                 inserting.append('')

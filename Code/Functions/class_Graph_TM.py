@@ -15,21 +15,28 @@ class Graph_TM:
         weights = []
         
         for row in cb.data.iterrows():
-            for i in range(1, len(row[1])):
-                if row[1][i] == '':
-                    break
-                for j in range(i + 1, len(row[1])):
-                    if row[1][j] == '':
-                        break
-                    if [row[1][i], row[1][j]] in self.edges2add:
-                        index = self.edges2add.index([row[1][i], row[1][j]])
-                        weights[index] += 1
-                    elif [row[1][j], row[1][i]] in self.edges2add:
-                        index = self.edges2add.index([row[1][j], row[1][i]])
-                        weights[index] += 1
-                    else:
-                        self.edges2add.append([row[1][i], row[1][j]])
-                        weights.append(1)
+        	if row[1][1] != '':
+        		weight = float(row[1][1])
+        		
+        	for i in range(2, len(row[1])):
+        		# i = 0: page
+        		# i = 1: weight
+        		# i > 1: characters
+        		if row[1][i] == '':
+        			break
+        			
+        		for j in range(i + 1, len(row[1])):
+        			if row[1][j] == '':
+        				break
+        			elif [row[1][i], row[1][j]] in self.edges2add:
+        				index = self.edges2add.index([row[1][i], row[1][j]])
+        				weights[index] += weight
+        			elif [row[1][j], row[1][i]] in self.edges2add:
+        				index = self.edges2add.index([row[1][j], row[1][i]])
+        				weights[index] += weight
+        			else:
+        				self.edges2add.append([row[1][i], row[1][j]])
+        				weights.append(weight)
 
         for i in range(len(self.edges2add)):
             self.edges2add[i].append(weights[i])
