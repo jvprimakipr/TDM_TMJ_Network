@@ -8,6 +8,7 @@ class Graph_TM:
         self.Graph = nx.Graph()
         self.edges2add = []
         self.communities = None
+        self.node_weights = {}
         
     def data2insert(self, file):
         cb = TM()
@@ -24,6 +25,10 @@ class Graph_TM:
         		# i > 1: characters
         		if row[1][i] == '':
         			break
+        		elif row[1][i] in self.node_weights:
+        			self.node_weights[row[1][i]] += weight
+        		else:
+        			self.node_weights[row[1][i]] = weight
         			
         		for j in range(i + 1, len(row[1])):
         			if row[1][j] == '':
@@ -64,6 +69,7 @@ class Graph_TM:
                      k = 0.001,
                      max_width = 10,
                      max_node_size = 100,
+                     node_size_by = 'pages',
                      plot_size = (15, 10),
                      highlight = ['Mônica', 'Cebolinha', 'Cascão', 'Magali', 'Chico Bento'],
                      highlight_color = 'red',
@@ -82,11 +88,18 @@ class Graph_TM:
         else:
             G = self.Graph
         
+        if node_size_by == 'pages':
+        	sizes = list(self.node_weights.values())
+        elif node_size_by == 'degrees':
+        	sizes = list(dict(nx.degree(G)).values())
+        else:
+        	sizes = node_size_by
+        
+        sizes = list(dict(nx.degree(G)).values())
         pos = nx.spring_layout(G, k = k)
         plt.figure(figsize = plot_size)
         node_colors = []
-        degrees = list(dict(nx.degree(G)).values())
-        node_size = [max_node_size * degree / max(degrees) for degree in degrees]
+        node_size = [max_node_size * size / max(sizes) for size in sizes]
         width = [G[u][v]['weight'] for u, v in G.edges()]
         width = [max_width * v / max(width) for v in width]
 
