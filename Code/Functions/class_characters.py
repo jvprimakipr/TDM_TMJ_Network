@@ -14,6 +14,7 @@ class characters:
         self.father_number = 0
         self.mother_number = 0        
         self.child_number = 0
+        self.animal_number = 0
         self.crowd_number = 0
         self.list_crowds = []
         
@@ -74,9 +75,10 @@ class characters:
         self.pxav = 'Seu Xavier'
         self.mdud = 'Dona Cecília'
         self.pdud = 'Seu Durval'
+        self.mdoc = 'Dona Keiko'
+        self.pdoc = 'Seu Nimbão'
         self.mtv = 'Mãe do Teveluisão'
         self.mdor = 'Mãe da Dorinha'
-        self.mdoc = 'Mãe do Do Contra / Nimbus'
         
         # Tios(as), Avôs(ós)
         self.tnen = 'Tia Nena'
@@ -89,29 +91,37 @@ class characters:
         self.spa = 'Professor Spada / Doutor Spam'
         self.cab = 'Cabeleira Negra'
         self.lor = 'Lorde Coelhão'
-        self.yuk = 'Yuka'
-        self.ark = 'Arkanum'
-        self.kra = 'Kraker'
         
         # Adultos (em geral)
         self.lou = 'Louco'
         self.juc = 'Seu Juca'
+        
+        #Seres Míticos
+        self.spau = 'São Paulo' 
+        
+        # Vida Real
+        self.ali = 'Alice'
+        
+        ###############################
+        #### TURMA DA MÔNICA JOVEM ####
+        ###############################
+        
+        #Jovens
+        
+        #Adultos
         self.fal = 'Prof Falconi'
         self.van = 'Vanda'
         self.val = 'Valéria'
         
-        #Seres Míticos
+        #Outros
         self.ebor = 'Bóreas'
         self.ezep = 'Zephyrus'
         self.eeur = 'Euros'
         self.enot = 'Notus'
-        self.spau = 'São Paulo'
-        
-        #Seres Tecnológicos
+        self.yuk = 'Yuka'
+        self.ark = 'Arkanum'
+        self.kra = 'Kraker'
         self.rob = 'Robóris'
-        
-        # Vida Real
-        self.ali = 'Alice'
         
         ###############################
         ####### TURMA DOS PETS ########
@@ -317,13 +327,27 @@ class characters:
         else:
             self.child_number += 1
             return self.ID(f'Criança {self.child_number}')
+        
+    def ani(self, n = 0, add = '', reset = False):
+        if n != 0:
+            return self.ID(f'Animal {n}')
+        elif add != '':
+            return self.ID(f'Animal {self.animal_number + add}')
+        elif reset:
+            self.animal_number = 0
+        else:
+            self.animal_number += 1
+            return self.ID(f'Animal {self.animal_number}')
     
     def kids(self, n):
         return [self.child() for i in range(n)]
 
     # Cria uma multidão, facilitando o acesso a muitos figurantes que se repetem em várias páginas
-    def crowd(self, n = 0, figs = 10):
-        if n == 0:
+    def crowd(self, n = 0, figs = 10, reset = False):
+        if reset:
+            self.crowd_number = 0
+            self.list_crowds = []
+        elif n == 0:
             self.crowd_number += 1
             crowd = [self.fig() for i in range(figs)]
             self.list_crowds.append(crowd)
@@ -338,3 +362,5 @@ class characters:
         self.mot(reset = True)
         self.fat(reset = True)
         self.child(reset = True)
+        self.ani(reset = True)
+        self.crowd(reset = True)

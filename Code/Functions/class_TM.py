@@ -34,8 +34,8 @@ class TM:
             self.end_history = False
             
         if inserting[0] != '' or (len(inserting) > 1 and inserting[1] != ''):
-        	# entre parênteses é o caso da contracapa da TMJ
-        	inserting.insert(1, w) # adicionando o peso daquela página/cena
+            # entre parênteses é o caso da contracapa da TMJ
+            inserting.insert(1, w) # adicionando o peso daquela página/cena
             
         for character in inserting[2:]:
             if character not in self.characters:
