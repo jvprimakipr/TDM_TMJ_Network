@@ -328,7 +328,7 @@ class characters:
             self.child_number += 1
             return self.ID(f'Criança {self.child_number}')
         
-    def ani(self, n = 0, add = '', reset = False):
+    def anim(self, n = 0, add = '', reset = False):
         if n != 0:
             return self.ID(f'Animal {n}')
         elif add != '':
@@ -362,5 +362,5 @@ class characters:
         self.mot(reset = True)
         self.fat(reset = True)
         self.child(reset = True)
-        self.ani(reset = True)
+        self.anim(reset = True)
         self.crowd(reset = True)

@@ -1,17 +1,10 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
-
 c = characters()
-c.reset()
-c.comic_book = '1tmj_01'
-
-cap1 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.yuk, 'Kraker', c.end], #capa
-        #[],
-        #[],
-        #[],
-        #[],
-        #[],
-        [c.beg, c.mon, c.mmon, c.san], #Página 7
+c.comic_book = '#1tmj_01'
+cap1 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.yuk, c.kra, c.end], #Capa - Eles Cresceram (4 Dimensões Mágicas)
+        [], [], [], [], [],
+        [c.beg, c.mon, c.mmon, c.san], #1. Começa um novo dia - Pág 7
         [c.mon, c.san],
         [c.mon, c.san],
         [c.mon],
@@ -22,7 +15,7 @@ cap1 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.yuk, 'Kraker', c.end], #capa
         [c.cas, c.mcas, c.pcas],
         [c.cas, c.pcas],
         [c.cas, c.pcas],
-        [c.cas, c.pcas, c.ceb], #[1/4, [c.cas, c.pcas], [c.ceb]]
+        [2, [c.cas, c.pcas], [c.ceb]],
         [c.ceb, c.pceb, c.marceb],
         [c.ceb, c.mceb, c.marceb],
         [c.ceb, c.mceb, c.marceb],
@@ -43,21 +36,21 @@ cap1 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.yuk, 'Kraker', c.end], #capa
         [c.ceb, c.cas, c.mar],
         [c.ceb, c.cas],
         [c.ceb, c.cas],
-        [c.ceb, c.cas, c.mon, c.pmon, c.mag], #[1/2, [c.ceb, c.cas], [c.mon, c.pmon, c.mag]]
+        [2, [c.ceb, c.cas], [c.mon, c.mag, c.pmon]],
         [c.mon, c.pmon, c.mag],
         [c.mon, c.mag],
         [c.mon, c.mag],
         [c.mon, c.mag],
         [c.mon, c.ceb],
         [c.mon, c.ceb, c.mag, c.cas],
-        [c.mon, c.ceb, c.mag, c.end]
-       ]#[],
-cap2 = [[c.beg, c.franj, c.fal, 'Robô de Boas Vindas', 'Entregador'],
-        [c.franj, c.fal, 'Robô de Boas Vindas', 'Entregador'],
+        [c.mon, c.ceb, c.mag, c.end],
+        []]
+cap2 = [[c.beg, c.franj, c.fal, c.ID('Robô Bem-Vindos'), c.ID('Entregador')], #2. O artefato místico - Pág 48
+        [c.franj, c.fal, c.ID('Robô Bem-Vindos'), c.ID('Entregador')],
         [c.franj, c.fal],
-        [c.franj, 'Entregador'],
-        [c.franj, 'Entregador'],
-        [c.franj, 'Entregador'],
+        [c.franj, c.ID('Entregador')],
+        [c.franj, c.ID('Entregador')],
+        [c.franj, c.ID('Entregador')],
         [c.franj],
         [c.franj, c.anj],
         [c.mon, c.cas],
@@ -92,7 +85,7 @@ cap2 = [[c.beg, c.franj, c.fal, 'Robô de Boas Vindas', 'Entregador'],
         [c.cas, c.cap],
         [c.mon, c.ceb, c.cap],
         [c.mon, c.ceb, c.mag, c.cas, c.yuk, c.end]]
-cap3 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.yuk],
+cap3 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.yuk], #3 Poderosa Yuka - Pág 88
         [c.mon, c.ceb, c.mag, c.cas, c.yuk],
         [c.mon, c.ceb, c.mag, c.cas],
         [c.mon, c.cap],
@@ -102,16 +95,16 @@ cap3 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.yuk],
         [c.mon, c.ceb, c.mag, c.cas, c.mmon, c.pceb, c.mmag, c.pcas],
         [c.mon, c.ceb, c.mag, c.cas, c.yuk],
         [c.cap, c.pceb],
-        [c.mmon, c.pceb, c.mmag, c.pcas, c.fig(), 'Cavalo 1', 'Cavalo 2', 'Cavalo 3', 'Cavalo 4'],
-        [c.mmon, c.pceb, c.mmag, c.pcas, 'Imperador', 'Guarda 1', 'Guarda 2'],
-        [c.mmon, c.pceb, c.mmag, c.pcas, c.yuk, 'Imperador', 'Guarda 2'],
-        [c.mmon, c.pceb, c.mmag, c.pcas, 'Imperador'],
-        [c.ceb, 'Imperador'],
-        [c.mmon, c.pceb, c.mmag, c.pcas, 'Imperador'],
-        [c.mmon, c.pceb, c.mmag, c.pcas, c.ebor, c.ezep, c.eeur, c.enot, 'Imperador'],
+        [c.mmon, c.pceb, c.mmag, c.pcas, c.fig(), c.ID('Cavalo 1'), c.ID('Cavalo 2'), c.ID('Cavalo 3'), c.ID('Cavalo 4')],
+        [c.mmon, c.pceb, c.mmag, c.pcas, 'Imperador Japonês Sec XVI', c.ID('Guarda 1'), c.ID('Guarda 2')],
+        [c.mmon, c.pceb, c.mmag, c.pcas, c.yuk, 'Imperador Japonês Sec XVI', c.ID('Guarda 2')],
+        [c.mmon, c.pceb, c.mmag, c.pcas, 'Imperador Japonês Sec XVI'],
+        [c.ceb, 'Imperador Japonês Sec XVI'],
+        [c.mmon, c.pceb, c.mmag, c.pcas, 'Imperador Japonês Sec XVI'],
+        [c.mmon, c.pceb, c.mmag, c.pcas, c.ebor, c.ezep, c.eeur, c.enot, 'Imperador Japonês Sec XVI'],
         [c.mmon, c.pceb, c.mmag, c.pcas, c.ebor, c.ezep, c.eeur, c.enot],
-        [c.mmon, c.pceb, c.pcas, 'Cavalo 1', 'Cavalo 2', 'Cavalo 4'],
-        [c.mmag, c.yuk, 'Cavalo 3'],
+        [c.mmon, c.pceb, c.pcas, c.ID('Cavalo 1'), c.ID('Cavalo 2'), c.ID('Cavalo 4')],
+        [c.mmag, c.yuk, c.ID('Cavalo 3')],
         [c.mon, c.ceb, c.cas, c.mmon],
         [c.cap, c.yuk],
         [c.mon, c.ceb, c.cap, c.ebor, c.ezep, c.eeur, c.enot],
@@ -127,15 +120,15 @@ cap3 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.yuk],
         [c.ceb, c.mag, c.cas, c.cap],
         [c.franj, c.fal, c.yuk, 'Monstro de Poeira 1', 'Monstro de Poeira 2'],
         [c.mon, c.ceb, c.mag, c.cas, c.ebor, c.ezep, c.eeur, c.enot],
-        [c.ark, 'Kraker', 'Ninja', 'Lobisomem'],
+        [c.ark, c.kra, c.ID('Ninja'), c.ID('Lobisomem')],
         [c.mon, c.ceb, c.mag, c.cas, c.cap],
         [c.mon, c.yuk],
         [c.mon, c.ceb, c.mag, c.cas],
         [c.mon, c.ceb, c.mag, c.cas, c.yuk, c.end],
-        #[],
-        #[],
-        #[],
-        #[],
+        [],
+        [],
+        [],
+        [],
         [c.mon, c.ceb]] #4º Capa
         
 pages1 = cap1 + cap2 + cap3
