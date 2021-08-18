@@ -22,7 +22,7 @@ cap4 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.end], #Capa - A Aventura Continua!
         [c.cap, c.yuk],
         [c.cap, c.yuk],
         [c.cap, c.yuk],
-        [c.mon, c.ceb, c.mag, c.cas, c.shade(), c.shade(), c.shade(), c.fig(), c.fig(), c.end]] #5. O Unicórnio Gêmeo Saltitante - Pág 26
+        [c.mon, c.ceb, c.mag, c.cas] + c.shades(3) + c.figs(2) + [c.end]] #5. O Unicórnio Gêmeo Saltitante - Pág 26
 cap5 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.van, c.val, c.ID('Elfo'), c.ID('Bárbaro'), c.ID('Anão 1'), c.ID('Anão 2'), c.anim(), c.anim()],
         [c.beg, c.mon, c.ceb, c.mag, c.cas, c.van, c.val, c.ID('Elfo'), c.ID('Bárbaro'), c.ID('Anão 1'), c.ID('Anão 2'), c.anim(1), c.anim(2)],
         [c.ceb, c.val],
@@ -37,7 +37,7 @@ cap5 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.van, c.val, c.ID('Elfo'), c.ID('B�
         [c.mon, c.mag, c.cas, c.van, c.ID('Viking'), c.ID('Orc')],
         [c.mon, c.mag, c.van, c.val, c.ID('Bárbaro'), c.ID('Orc')],
         [c.mon, c.ceb, c.mag, c.cas, c.ID('Bárbaro'), c.ID('Viking'), c.ID('Orc')],
-        [c.mon, c.ceb, c.mag, c.cas, c.ID('Óinc 1'), c.ID('Óinc 2'), c.shade(), c.shade(), c.shade(), c.shade(), c.shade()],
+        [c.mon, c.ceb, c.mag, c.cas, c.ID('Óinc 1'), c.ID('Óinc 2')] + c.shades(5),
         [c.mon, c.ceb, c.mag, c.cas, c.ID('Óinc 1'), c.ID('Óinc 2'), c.shade(add=-4), c.shade(add=-3), c.shade(add=-2), c.shade(add=-1), c.shade(add=0)],
         [c.mon, c.ceb, c.cas, c.ID('Óinc 1'), c.shade(add=-4), c.shade(add=-3), c.shade(add=-2), c.shade(add=-1), c.shade(add=0)],
         [c.mon, c.ceb, c.mag, c.ID('Óinc 1'), c.ID('Óinc 2'), c.ID('Óinc 3')],
