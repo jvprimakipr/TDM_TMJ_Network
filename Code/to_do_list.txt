@@ -1,0 +1,22 @@
+OK Show the number of nodes and edges
+Compute the density of edges in the network (divide the number of edges by the total number of possible pairs in the network)
+OK Compute the average degree
+Compute the standard deviation of the degree
+OK Build the list of degree probabilities
+OK Plot the degree distribution
+OK Plot your network
+OK Diameter of the graph
+OK Number of connected components
+Bridges of the network
+Histogram of the clustering coefficients of the network
+Average clustering coefficient of the graph
+Global clustering coefficient of the network
+Suppose that it is an Erdös-Rényi graph. What is the estimated probability p of having an edge between two nodes
+Generate a random graph with the same number of vertices and the same p
+Compare the degree distribution of the random network to the degree distribution of your dataset
+Fit the power law distribution to your network. What is the resulting alpha?
+Compare the estimated degree distribution with the power law distribution
+Do a bootstrap procedure to test the goodness of fit (tip: check the function numpy.random.choice to generate the bootstrap samples, and powerlaw.power_law_ks_distance to compute the Kormogorov-Smirnov distance). For more details, see "Advanced Topics 4.C" in Barabasi's book.
+Obtain the maximum degree of the network
+Compare it to the expected size according to the power law degree distribution
+compute the average distance of the network. Is it an ultra-small world, small world or anomalous network?
