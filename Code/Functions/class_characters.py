@@ -345,7 +345,7 @@ class characters:
         return [self.child() for i in range(n)]
 
     # Cria uma multidão, facilitando o acesso a muitos figurantes que se repetem em várias páginas
-    def crowd(self, n = 0, figs = 10, shades = 0, reset = False):
+    def crowd(self, n = 0, figs = 10, shades = 0, reset = False, name = ''):
         if reset:
             self.crowd_number = 0
             self.list_crowds = []
@@ -353,7 +353,10 @@ class characters:
             self.crowd_number += 1
             crowd = []
             if figs > 0:
-                crowd += self.figs(figs)
+                if name == '':
+                    crowd += self.figs(figs)
+                else:
+                    crowd += [self.ID(f'{name} {i}') for i in range(1,figs+1)]
             if shades > 0:
                 crowd += self.shades(shades)
             self.list_crowds.append(crowd)
