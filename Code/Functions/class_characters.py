@@ -124,6 +124,8 @@ class characters:
         self.ark = 'Arkanum'
         self.kra = 'Kraker'
         self.rob = 'Robóris'
+        self.pul = 'Robô Pulsar'
+        self.usa = 'Princesa Usagi Mimi'
         
         ###############################
         ####### TURMA DOS PETS ########
@@ -356,7 +358,11 @@ class characters:
                 if name == '':
                     crowd += self.figs(figs)
                 else:
-                    crowd += [self.ID(f'{name} {i}') for i in range(1,figs+1)]
+                    num = 0
+                    for c in self.list_crowds:
+                        if name in c[0]:
+                            num += len(c)
+                    crowd += [self.ID(f'{name} {i}') for i in range(num+1, num+figs+1)]
             if shades > 0:
                 crowd += self.shades(shades)
             self.list_crowds.append(crowd)
