@@ -123,9 +123,11 @@ class characters:
         self.yuk = 'Yuka'
         self.ark = 'Arkanum'
         self.kra = 'Kraker'
-        self.rob = 'Robóris'
-        self.pul = 'Robô Pulsar'
+        self.robs = 'Robóris'
         self.usa = 'Princesa Usagi Mimi'
+        self.rob = 'Robô'
+        self.imp = 'Imperador Usagi'
+        self.kam = 'Lorde Kamen'
         
         ###############################
         ####### TURMA DOS PETS ########

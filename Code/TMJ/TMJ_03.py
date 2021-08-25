@@ -5,19 +5,19 @@ c.comic_book = '#1tmj_03'
 cap8 = [[c.beg, c.mon, c.ceb, 'Kraker', c.end], #Capa - Novos Desafios
         [], [], [], [], [],
         [c.beg, c.mon, c.ceb, c.ezep], #8. Tobor - Pág 7
-        [c.mon, c.ceb, c.mag, c.cas, c.rob],
-        [c.cas, c.rob],
-        [c.mon, c.ceb, c.mag, c.cas, c.ezep, c.rob],
-        [c.mon, c.ceb, c.mag, c.cas, c.ezep, c.rob],
+        [c.mon, c.ceb, c.mag, c.cas, c.robs],
+        [c.cas, c.robs],
+        [c.mon, c.ceb, c.mag, c.cas, c.ezep, c.robs],
+        [c.mon, c.ceb, c.mag, c.cas, c.ezep, c.robs],
         [c.ceb, c.cas],
         [c.ceb, c.cas, c.ID('Robô-Ofurô')],
         [c.mon, c.ceb, c.mag, c.ID('Robô-Roupa')],
         [c.mon, c.ceb, c.mag, c.ID('Robô-Cozinheiro')],
         [c.mon, c.ceb, c.mag],
         [c.mon, c.ceb, c.mag, c.cas],
-        [c.mon, c.ceb, c.mag, c.cas, c.rob],
-        [c.mon, c.ceb, c.mag, c.rob, c.ID('Motox 3D 228 1'), c.ID('Motox 3D 228 2')],
-        [c.ceb, c.cas, c.rob, c.ID('Motox 3D 228 1')],
+        [c.mon, c.ceb, c.mag, c.cas, c.robs],
+        [c.mon, c.ceb, c.mag, c.robs, c.ID('Motox 3D 228 1'), c.ID('Motox 3D 228 2')],
+        [c.ceb, c.cas, c.robs, c.ID('Motox 3D 228 1')],
         [c.mon, c.ceb, c.ID('Motox 3D 228 1'), c.ID('Motox 3D 228 2')],
         [c.cap, c.yuk],
         [c.cap, c.yuk],
@@ -25,13 +25,13 @@ cap8 = [[c.beg, c.mon, c.ceb, 'Kraker', c.end], #Capa - Novos Desafios
         [c.franj, c.fal],
         [c.franj, c.mar, c.den, c.marcas],
         [c.mar, c.den, c.marcas, c.end]]
-cap9 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.rob, c.ID('Roboy Geórgio'), c.fig(), c.fig(), c.fig()], #9. O Grande Mestre - Pág 28
-        [c.mon, c.ceb, c.mag, c.cas, c.rob, c.ID('Roboy Geórgio'), c.fig(add=-2), c.fig(add=-1), c.fig(add=0)],
-        [c.ceb, c.cas, c.blo, c.rob],
+cap9 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.robs, c.ID('Roboy Geórgio'), c.fig(), c.fig(), c.fig()], #9. O Grande Mestre - Pág 28
+        [c.mon, c.ceb, c.mag, c.cas, c.robs, c.ID('Roboy Geórgio'), c.fig(add=-2), c.fig(add=-1), c.fig(add=0)],
+        [c.ceb, c.cas, c.blo, c.robs],
         [c.mon, c.mag, c.blo],
         [c.mag, c.cas, c.blo, c.kra],
         [c.mon, c.ceb, c.mag, c.cas, c.blo],
-        [c.mon, c.ceb, c.blo, c.rob],
+        [c.mon, c.ceb, c.blo, c.robs],
         [c.mag, c.cas, c.blo],
         [c.mon, c.ceb, c.mag, c.blo],
         [c.mon, c.ceb, c.blo],
@@ -97,7 +97,7 @@ cap10 = [[c.beg, c.mon, c.blo, c.kra, 'Coelho de Ferro'], #10. Batalhas Infinita
         [c.cap, c.yuk],
         [c.cap, c.yuk],
         [c.mon, c.ceb, c.mag, c.cas, c.xab, c.ast, c.comp],
-        [c.mon, c.ceb, c.mag, c.cas, c.blo, c.rob],
+        [c.mon, c.ceb, c.mag, c.cas, c.blo, c.robs],
         [c.mon, c.ceb, c.mag, c.cas, c.blo, 'Coelho de Ferro', c.fig(add=0), c.fig(), c.fig(), c.end]]
 cap11 = [[c.beg, c.mon, c.ceb, c.mag, c.cas], #11. Tchalu - Pág 102
         [c.mon, c.ceb, c.mag, c.cas],
