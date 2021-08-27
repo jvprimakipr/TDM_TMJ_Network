@@ -20,7 +20,7 @@ cap1 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.tit, c.den, c.end], #Capa - As Ave
         [c.mon, c.ceb, c.mag],
         [c.mon, c.mag, c.mmon],
         [c.mon, c.mag, c.san],
-        [2, [c.mon, c.ceb], [c.mon, c.mag]],
+        [2, [c.mon, c.ceb, c.san], [c.mon, c.mag]],
         [c.mon, c.mag, c.san],
         [c.mon, c.mag],
         [c.mon, c.mag],
