@@ -4,14 +4,14 @@ c = characters()
 c.comic_book = '#1tmj_06'
 cap1 = [[c.beg, c.mon, c.ceb, c.franj, c.xab, c.ast, c.end], #Capa - O Brilho de um Pulsar!
         [], [], [], [], [],
-        [c.mon, c.ceb, c.mag, c.cas, c.xab, c.ast],#, c.], #1. Vamos Subindo - Pág 7
+        [c.beg, c.mon, c.ceb, c.mag, c.cas, c.xab, c.ast],#, c.], #1. Vamos Subindo - Pág 7
         [c.mon, c.mmon, c.pmon],
         [c.mon, c.mmon, c.pmon],
         [c.mon, c.mag, c.ID('Aeromoça 1')],
         [c.mon, c.mag, c.cas, c.ID('Aeromoça 1')],
         [c.ceb, c.cas],
-        [c.mon, c.ceb, c.cas]]
-cap2 = [[], #2. O Brilho de um Pulsar - Pág 14
+        [c.mon, c.ceb, c.cas, c.end]]
+cap2 = [[c.beg], #2. O Brilho de um Pulsar - Pág 14
         [],
         [c.mon, c.mmon, c.pmon],
         [c.mmon, c.pmon],
@@ -36,8 +36,8 @@ cap2 = [[], #2. O Brilho de um Pulsar - Pág 14
         [c.mon],
         [c.mon, c.ceb, c.cas],
         [c.mon, c.mag, c.franj],
-        [c.franj, c.ast]]
-cap3 = [[c.mon, c.mag], #3. Que Demais - Pág 40
+        [c.franj, c.ast, c.end]]
+cap3 = [[c.beg, c.mon, c.mag], #3. Que Demais - Pág 40
         [c.mon, c.mag, c.ID('Jornalista 1')],
         [c.mon, c.mag],
         c.shades(5),
@@ -123,7 +123,7 @@ cap3 = [[c.mon, c.mag], #3. Que Demais - Pág 40
         [c.mon, c.xab, c.rob],
         [c.usa, 'Robô que diz resiliente'],
         [c.usa, 'Robô que diz resiliente'],
-        [c.usa],
+        [c.usa, c.end],
         [],
         [],
         [],
