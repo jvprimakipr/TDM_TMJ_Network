@@ -42,8 +42,8 @@ cap4 = [[c.beg, c.mon, c.ceb, c.rob, c.imp, c.end], #Capa - O Brilho de um Pulsa
         [c.mon, c.ceb, c.mag, c.cas, c.franj, c.xab, c.ast, c.rob, 'Traje de Combate'],
         [c.ast, c.rob, 'Traje de Combate'],
         [c.mon, c.ceb, c.cas, c.xab],
-        [c.ast, c.rob, 'Traje de Combate']]
-cap5 = [[c.mon, c.rob], #5. Defenda-se - Pág 46
+        [c.ast, c.rob, 'Traje de Combate', c.end]]
+cap5 = [[c.beg, c.mon, c.rob], #5. Defenda-se - Pág 46
         [c.mon, c.rob],
         [c.ast, c.rob, 'Traje de Combate'],
         [c.ast, c.rob, 'Traje de Combate'],
@@ -63,8 +63,8 @@ cap5 = [[c.mon, c.rob], #5. Defenda-se - Pág 46
         [c.ast],
         [c.rob, c.ID('Robô Pulsar 1')] + c.crowd(name='Guerreiro Robô'),
         [c.ceb, c.cas, c.xab, c.ast],
-        [] + c.figs(5) + c.shades(10)]
-cap6 = [[c.mon, c.mag, c.rob] + c.figs(2), #6. Proteger quem eu amo - Pág 67
+        [] + c.figs(5) + c.shades(10) + [c.end]]
+cap6 = [[c.beg, c.mon, c.mag, c.rob] + c.figs(2), #6. Proteger quem eu amo - Pág 67
         [c.mon, c.mag, c.rob] + c.figs(4),
         [c.mon, c.rob],
         [c.mon, c.mag, c.rob],
@@ -123,7 +123,7 @@ cap6 = [[c.mon, c.mag, c.rob] + c.figs(2), #6. Proteger quem eu amo - Pág 67
         [c.mon, c.usa],
         [c.mon, c.ceb, c.mag, c.cas, c.franj, c.zlui, c.xab, c.ast, c.usa, c.rob],
         [c.usa, c.kam, c.ID('Alien 1')],
-        [c.kam, c.ID('Alien 1')],
+        [c.kam, c.ID('Alien 1'), c.end],
         [],
         [],
         [],
