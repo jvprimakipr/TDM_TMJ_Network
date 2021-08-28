@@ -6,6 +6,7 @@ class characters:
         # Auxiliares na marcação das histórias
         self.beg = 'begin'
         self.end = 'end'
+        self.cb = self.comic_book + ' '
         
         # Auxiliares para contagem
         self.figurant_number = 0
@@ -15,7 +16,10 @@ class characters:
         self.mother_number = 0        
         self.child_number = 0
         self.animal_number = 0
+        self.monster_number = 0
         self.crowd_number = 0
+        self.dino_number = 0
+        self.caveman_number = 0
         self.list_crowds = []
         
         # God
@@ -61,6 +65,7 @@ class characters:
         self.xab = 'Xabéu'
         self.ani = 'Aninha'
         self.dor = 'Dorinha'
+        self.ver = 'Verinha'
         
         # Pais e Mães
         self.mmon = 'Dona Luísa'
@@ -344,6 +349,39 @@ class characters:
         else:
             self.animal_number += 1
             return self.ID(f'Animal {self.animal_number}')
+        
+    def mons(self, n = 0, add = '', reset = False):
+        if n != 0:
+            return self.ID(f'Monstro {n}')
+        elif add != '':
+            return self.ID(f'Monstro {self.monster_number + add}')
+        elif reset:
+            self.monster_number = 0
+        else:
+            self.monster_number += 1
+            return self.ID(f'Monstro {self.monster_number}')
+        
+    def dino(self, n = 0, add = '', reset = False):
+        if n != 0:
+            return self.ID(f'Dinossauro {n}')
+        elif add != '':
+            return self.ID(f'Dinossauro {self.dino_number + add}')
+        elif reset:
+            self.dino_number = 0
+        else:
+            self.dino_number += 1
+            return self.ID(f'Dinossauro {self.dino_number}')
+        
+    def cave(self, n = 0, add = '', reset = False):
+        if n != 0:
+            return self.ID(f'Homem das Cavernas {n}')
+        elif add != '':
+            return self.ID(f'Homem das Cavernas {self.caveman_number + add}')
+        elif reset:
+            self.caveman_number = 0
+        else:
+            self.caveman_number += 1
+            return self.ID(f'Homem das Cavernas {self.caveman_number}')
     
     def kids(self, n):
         return [self.child() for i in range(n)]
@@ -381,3 +419,6 @@ class characters:
         self.child(reset = True)
         self.anim(reset = True)
         self.crowd(reset = True)
+        self.mons(reset = True)
+        self.dino(reset = True)
+        self.cave(reset = True)
