@@ -74,6 +74,7 @@ class Graph_TM:
                      highlight = ['Mônica', 'Cebolinha', 'Cascão', 'Magali', 'Chico Bento'],
                      highlight_color = 'red',
                      max_connected_components = 1,
+                     path = '../TeX/Second set/img',
                      filename = ''):
         
         connected_components = list(nx.connected_components(self.Graph))
@@ -122,8 +123,8 @@ class Graph_TM:
                 node_size = node_size)
         
         if filename != '':
-            plt.savefig(f'../TeX/img/{filename}.png')
-            print(f'Graph saved as ../TeX/img/{filename}.png')
+            plt.savefig(f'{path}/{filename}.png')
+            print(f'Graph saved as {path}/{filename}.png')
 
     def find_communities(self):
         self.communities = sorted(nxcom.greedy_modularity_communities(self.Graph), key = len, reverse = True)
@@ -169,6 +170,7 @@ class Graph_TM:
                          node_size = 3,
                          plot_size = (15, 10),
                          max_connected_components = 1,
+                         path = '../TeX/Second set/img',
                          filename = ''):
         if self.communities == None:
             _ = self.find_communities()
@@ -216,5 +218,5 @@ class Graph_TM:
                 width = width)
         
         if filename != '':
-            plt.savefig(f'../TeX/img/{filename}.png')
-            print(f'Graph saved as ../TeX/img/{filename}.png')
+            plt.savefig(f'{path}/{filename}.png')
+            print(f'Graph saved as {path}/{filename}.png')

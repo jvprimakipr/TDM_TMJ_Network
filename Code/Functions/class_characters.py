@@ -1,7 +1,7 @@
 class characters:
     def __init__(self):
         # Auxiliar para diferenciar os gibis
-        self.comic_book = ''
+        self.comic_book = ''	
 
         # Auxiliares na marcação das histórias
         self.beg = 'begin'

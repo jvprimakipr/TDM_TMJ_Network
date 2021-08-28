@@ -4,6 +4,7 @@ from Functions.class_characters import characters
 c = characters()
 c.reset()
 c.comic_book = '#tdm18'
+c.cb = c.comic_book + ' '
 
 pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [],

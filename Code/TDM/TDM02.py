@@ -4,6 +4,7 @@ from Functions.class_characters import characters
 c = characters()
 c.reset()
 c.comic_book = '#tdm02'
+c.cb = c.comic_book + ' '
 
 pages2 = [[c.beg, c.mag, 'Dud Van Winkle', c.fig(), c.end], # capa (Dud parece o Dudu)
           [],

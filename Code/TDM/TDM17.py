@@ -4,6 +4,7 @@ from Functions.class_characters import characters
 c = characters()
 c.reset()
 c.comic_book = '#tdm17'
+c.cb = c.comic_book + ' '
 
 pages17 = [[c.beg, c.ceb, c.san, c.cas] + c.figs(17) + [c.end], # figurantes são de tudo (mães, pais, crianças, atendentes, mas joguei só figurante mesmo)
 		   [],
