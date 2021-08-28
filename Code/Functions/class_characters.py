@@ -15,11 +15,12 @@ class characters:
         self.father_number = 0
         self.mother_number = 0        
         self.child_number = 0
+        self.student_number = 0
         self.animal_number = 0
         self.monster_number = 0
-        self.crowd_number = 0
         self.dino_number = 0
         self.caveman_number = 0
+        self.crowd_number = 0
         self.list_crowds = []
         
         # God
@@ -55,6 +56,7 @@ class characters:
         self.ric = 'Ricardinho'
         self.ber = 'Bernardinho'
         self.nicdem = 'Nico Demo'
+        self.toni = 'Tonhão da Rua de Baixo'
         
         # Secundárias (Feminino)
         self.den = 'Denise'
@@ -117,6 +119,7 @@ class characters:
         #Adultos
         self.fal = 'Prof Falconi'
         self.rub = 'Prof Rubens'
+        self.tea = 'Prof de Teatro'
         self.van = 'Vanda'
         self.val = 'Valéria'
         
@@ -339,6 +342,20 @@ class characters:
             self.child_number += 1
             return self.ID(f'Criança {self.child_number}')
         
+    def kids(self, n):
+        return [self.child() for i in range(n)]
+    
+    def stu(self, n = 0, add = '', reset = False):
+        if n != 0:
+            return self.ID(f'Estudante {n}')
+        elif add != '':
+            return self.ID(f'Estudante {self.student_number + add}')
+        elif reset:
+            self.student_number = 0
+        else:
+            self.student_number += 1
+            return self.ID(f'Estudante {self.student_number}')
+    
     def anim(self, n = 0, add = '', reset = False):
         if n != 0:
             return self.ID(f'Animal {n}')
@@ -382,9 +399,6 @@ class characters:
         else:
             self.caveman_number += 1
             return self.ID(f'Homem das Cavernas {self.caveman_number}')
-    
-    def kids(self, n):
-        return [self.child() for i in range(n)]
 
     # Cria uma multidão, facilitando o acesso a muitos figurantes que se repetem em várias páginas
     def crowd(self, n = 0, figs = 10, shades = 0, reset = False, name = ''):
@@ -417,8 +431,9 @@ class characters:
         self.mot(reset = True)
         self.fat(reset = True)
         self.child(reset = True)
+        self.stu(reset = True)
         self.anim(reset = True)
-        self.crowd(reset = True)
         self.mons(reset = True)
         self.dino(reset = True)
         self.cave(reset = True)
+        self.crowd(reset = True)
