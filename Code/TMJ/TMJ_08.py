@@ -4,7 +4,7 @@ c = characters()
 c.comic_book = '#1tmj_08'
 cap7 = [[c.beg, c.mon, c.ceb, c.usa, c.kam, c.end], #Capa - O Brilho de um Pulsar! Parte Final
         [], [], [], [], [],
-        [c.usa, c.imp], #7. Corajosa... ou apenas tola - Pág 7
+        [c.beg, c.usa, c.imp], #7. Corajosa... ou apenas tola - Pág 7
         [c.usa, c.imp],
         [c.usa, c.imp],
         [c.usa, c.imp],
@@ -67,8 +67,8 @@ cap7 = [[c.beg, c.mon, c.ceb, c.usa, c.kam, c.end], #Capa - O Brilho de um Pulsa
         [c.mon, c.usa, c.kam],
         [c.mon, c.usa],
         [2, [c.mon, c.ceb, c.mag, c.cas, c.franj, c.ast, c.usa, c.rob], [c.mon, c.usa, c.imp]],
-        [c.mon, c.usa, c.kam]]
-cap8 = [[c.mon, c.usa, c.kam], #8. Lorde Kamen - Pág 71
+        [c.mon, c.usa, c.kam, c.end]]
+cap8 = [[c.beg, c.mon, c.usa, c.kam], #8. Lorde Kamen - Pág 71
         [c.mon, c.usa, c.kam],
         [c.mon, c.usa, c.kam],
         [c.mon, c.usa],
@@ -91,8 +91,8 @@ cap8 = [[c.mon, c.usa, c.kam], #8. Lorde Kamen - Pág 71
         [c.rob],
         [c.ceb, c.mag, c.cas, c.franj, c.zlui, c.xab, c.ast, c.rob],
         [c.franj, c.zlui, c.ast],
-        [c.franj, c.zlui]]
-cap9 = [[], #9. Configuração de Batalha - Pág 95
+        [c.franj, c.zlui, c.end]]
+cap9 = [[c.beg], #9. Configuração de Batalha - Pág 95
         [c.zlui],
         [c.zlui],
         [c.mon, c.usa, c.kam],
@@ -110,8 +110,8 @@ cap9 = [[], #9. Configuração de Batalha - Pág 95
         [c.mon, c.usa, c.rob],
         [c.mon, c.usa, c.rob, c.kam],
         [c.imp, c.kam] + c.figs(3) + c.crowd(1),
-        [c.mon, c.kam]]
-cap10 = [[c.mon, c.usa, c.rob], #10. Epílogo - Pág 114
+        [c.mon, c.kam, c.end]]
+cap10 = [[c.beg, c.mon, c.usa, c.rob], #10. Epílogo - Pág 114
          [],
          [c.ceb, c.franj, c.zlui, c.xab, c.ast],
          [c.ceb, c.mag, c.cas, c.franj, c.zlui, c.xab, c.ast],
@@ -123,7 +123,7 @@ cap10 = [[c.mon, c.usa, c.rob], #10. Epílogo - Pág 114
          [c.mon, c.ceb, c.cas, c.kam],
          [c.mon, c.ceb, c.usa, c.rob],
          [c.mon, c.ceb, c.franj, c.xab, '#1tmj_07 Guerreiro Robô 11'],
-         [c.mon, c.ceb, c.mag, c.cas, c.franj, c.zlui, c.xab, c.ast, c.usa, c.imp, c.rob, c.kam],
+         [c.mon, c.ceb, c.mag, c.cas, c.franj, c.zlui, c.xab, c.ast, c.usa, c.imp, c.rob, c.kam, c.end],
          [],
          [],
          [],
