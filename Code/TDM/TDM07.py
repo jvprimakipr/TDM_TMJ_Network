@@ -3,7 +3,7 @@ from Functions.class_characters import characters
 
 c = characters()
 c.reset()
-c.comic_book = 'gibi 7'
+c.comic_book = '#tdm07'
 
 pages7 = [[c.beg, c.mon, c.mar, c.ceb, c.cas, c.xav, c.nim, c.doc, c.hum, c.jer, c.end],
           [],
@@ -31,37 +31,37 @@ pages7 = [[c.beg, c.mon, c.mar, c.ceb, c.cas, c.xav, c.nim, c.doc, c.hum, c.jer,
           [c.beg, c.cas, c.mon, c.ceb],
           [c.cas, c.mag, c.mau, c.ali, c.end], # fim da história
           [c.beg, c.paj],
-          [c.paj, c.cac, 'Índia', 'Índio'],
-          [c.paj, c.cac, 'Índia', 'Índio', c.pap, c.end], # fim da história
+          [c.paj, c.cac, c.cb + 'Índia', c.cb + 'Índio'],
+          [c.paj, c.cac, c.cb + 'Índia', c.cb + 'Índio', c.pap, c.end], # fim da história
           [c.beg, c.cas],
           [c.mon, c.mag, c.ceb],
-          [c.dud, c.xav, c.spa, c.anj, 'Anjo 1', 'Anjo 2', 'Anjo 3', c.end], # fim da história
+          [c.dud, c.xav, c.spa, c.anj, c.cb + 'Anjo 1', c.cb + 'Anjo 2', c.cb + 'Anjo 3', c.end], # fim da história
           [],
           [], # [c.jot, c.mon, c.ceb, c.cas, c.mag], # passatempo
           [], # [c.mon, c.mag, c.ceb, c.cas, c.bid, c.gen], # correio
           [], # [c.mon, c.quin, c.nim, c.cas], # correio
-          [c.beg, 'Equilibrista', c.mon, c.mag, c.fig(), c.shade(), c.shade(), c.shade(), 'Palhaço 1', 'Palhaço 2'],
-          ['Homem Bala', c.mon, c.mag, c.shade(add = -1), c.shade(add = -2), c.shade(add = -3), c.shade(), c.shade(), c.shade(), c.shade(), 'Palhaço 3'], # fim da história
-          ['Mulher 1', 'Mulher 2', 'Mulher 3'],
-          ['Mulher 3', 'Mulher 4', c.pen, 'Fantasma do Sultão', c.end], # fim da história
+          [c.beg, c.fig(), c.mon, c.mag, c.fig(), c.shade(), c.shade(), c.shade(), c.fig(), c.fig()],
+          [c.fig(), c.mon, c.mag, c.shade(add = -1), c.shade(add = -2), c.shade(add = -3), c.shade(), c.shade(), c.shade(), c.shade(), c.fig()], # fim da história
+          [c.fig(), c.fig(), c.fig()],
+          [c.fig(add = 0), c.fig(), c.pen, 'Fantasma do Sultão', c.end], # fim da história
           [],
           [],
           [c.beg, c.mar],
-          [c.mar, 'Gato'],
-          [c.mar, 'Pitbull'],
+          [c.mar, c.anim()],
+          [c.mar, c.anim()],
           [c.mar, c.luc, c.mon, c.den, c.mag, c.end], # fim da história
           [c.beg, c.ceb, c.mag, c.mon],
-          [c.ceb, c.mon, c.mag, 'Alienígena 1 - gibi 7', 'Alienígena 2 - gibi 7', 'Alienígena 3 - gibi 7', 'Alienígena 4 - gibi 7', 'Alienígena 5 - gibi 7', 'Alienígena 6 - gibi 7'], # fim da história
+          [c.ceb, c.mon, c.mag, c.cb + 'Alienígena 1', c.cb + 'Alienígena 2', c.cb + 'Alienígena 3', c.cb + 'Alienígena 4', c.cb + 'Alienígena 5', c.cb + 'Alienígena 6'], # fim da história
           [c.ast],
-          [c.ast, 'Policial Alien'],
-          [c.ast, 'Policial Alien'],
-          [c.ast, 'Policial Alien', 'Computador do Astronauta', 'Senhorita Argh', 'Alien 1', 'Alien 2'],
-          [c.ast, 'Senhorita Argh', 'Alien 1', 'Alien 2'],
-          [c.ast, 'Alien 1', 'Alien 2', 'Alien 3', 'Senhorita Argh', c.fig(), c.fig()],
-          [c.ast, 'Alien 1', 'Alien 2', 'Senhorita Argh'],
-          [c.ast, 'Alien 1', 'Alien 2', 'Senhorita Argh'],
-          [c.ast, 'Alien 1', 'Alien 2', 'Senhorita Argh'],
-          [c.ast, 'Alien 1', 'Alien 2', 'Senhorita Argh', c.mast, c.end], # fim da história
+          [c.ast, c.mons()],
+          [c.ast, c.mons(add = 0)],
+          [c.ast, c.mons(add = 0), 'Computador do Astronauta', c.mons(), c.mons(), c.mons()],
+          [c.ast, c.mons(add = -2), c.mons(add = -1), c.mons(add = 0)],
+          [c.ast, c.mons(add = -2), c.mons(add = -1), c.mons(add = 0), c.mons(), c.fig(), c.fig()],
+          [c.ast, c.mons(add = -2), c.mons(add = -1), c.mons(add = -3)],
+          [c.ast, c.mons(add = -2), c.mons(add = -1), c.mons(add = -3)],
+          [c.ast, c.mons(add = -2), c.mons(add = -1), c.mons(add = -3)],
+          [c.ast, c.mons(add = -2), c.mons(add = -1), c.mons(add = -3), c.mast, c.end], # fim da história
           [c.beg, c.mon, c.mmon, c.ceb, c.mceb, c.mag, c.mmag, c.cas, c.mcas, c.end], # fim da história
           [c.beg, c.ceb],
           [c.ceb, c.pceb],

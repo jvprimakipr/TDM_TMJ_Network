@@ -3,7 +3,7 @@ from Functions.class_characters import characters
 
 c = characters()
 c.reset()
-c.comic_book = 'gibi 3'
+c.comic_book = '#tdm03'
 
 pages3 = [[c.beg, c.pceb, c.ceb, c.mon, c.cas, c.end], # capa
           [],
@@ -20,27 +20,27 @@ pages3 = [[c.beg, c.pceb, c.ceb, c.mon, c.cas, c.end], # capa
           [c.ceb, c.pceb, c.child(n = 14), c.child(n = 15)],
           [c.ceb, c.pceb, c.child(), c.child(), c.child(), c.child(), c.child()],
           [c.ceb, c.pceb, c.child(), c.child(), c.child()],
-          [c.ceb, c.pceb, c.mot(), 'Bebê', c.fat()],
-          [c.ceb, c.pceb, 'Bebê', c.fat(n = 2)],
-          [c.ceb, c.pceb, 'Jogador 1', 'Jogador 2', 'Jogador 3', 'Jogador 4', 'Jogador 5', c.mceb, c.fat(n = 2), 'Bebê'],
+          [c.ceb, c.pceb, c.mot(), c.cb + 'Bebê', c.fat()],
+          [c.ceb, c.pceb, c.cb + 'Bebê', c.fat(n = 2)],
+          [c.ceb, c.pceb, c.cb + 'Jogador 1', c.cb + 'Jogador 2', c.cb + 'Jogador 3', c.cb + 'Jogador 4', c.cb + 'Jogador 5', c.mceb, c.fat(n = 2), c.cb + 'Bebê'],
           [c.ceb, c.pceb],
-          [c.ceb, c.pceb, 'Pai Caramujo', 'Filho Caramujo', c.end], # fim da história
+          [c.ceb, c.pceb, c.anim(), c.anim(), c.end], # fim da história
           [],
           [c.beg, c.mon, c.san, c.mag],
-          [c.ceb, c.mag, c.cas, c.xav, 'Sorveteiro', c.end], # fim da história
+          [c.ceb, c.mag, c.cas, c.xav, c.fig(), c.end], # fim da história
           [c.beg, c.cas, c.fig(), c.fig(), c.fig()],
           [c.cas, c.fig(), c.fig(), c.fig(), c.fig()],
-          [c.cas, c.mcas, 'Caixa do Supermercado', c.end], # fim da história
+          [c.cas, c.mcas, c.fig(), c.end], # fim da história
           [],
-          [c.beg, c.pit, c.var, 'Dinossauro Rosa'],
+          [c.beg, c.pit, c.var, c.dino()],
           [c.pit, c.var, c.bol],
           [c.pit, c.var, c.bol],
-          [c.pit, c.var, 'Homem Tigre 1'],
-          ['Homem Tigre 1', c.pit, c.var, c.bol, 'Homem das Cavernas 1'],
-          [c.pit, c.var, c.bol, 'Homem Tigre 1', 'Homem Tigre 2', 'Homem Tigre 3'],
-          [c.pit, c.var, c.bol, 'Homem das Cavernas 2', 'Homem das Cavernas 3', 'Homem das Cavernas 4', 'Homem das Cavernas 5', 'Homem das Cavernas 6'],
-          ['Homem Tigre 1', 'Homem Tigre 2', 'Homem Tigre 3', 'Homem Tigre 4', 'Homem Tigre 5', c.pit, c.bol, c.var, 'Homem das Cavernas 1', 'Homem das Cavernas 2', 'Homem das Cavernas 3'], # fim da história
-          [c.zvam, c.fig(), c.end], # fim da história
+          [c.pit, c.var, c.cave(n = 1)],
+          [c.cave(n = 1), c.pit, c.var, c.bol, c.cave(n = 6)],
+          [c.pit, c.var, c.bol, c.cave(n = 1), c.cave(n = 2), c.cave(n = 3)],
+          [c.pit, c.var, c.bol, c.cave(n = 7), c.cave(n = 8), c.cave(n = 9), c.cave(n = 10), c.cave(n = 11)],
+          [c.cave(n = 1), c.cave(n = 2), c.cave(n = 3), c.cave(n = 4), c.cave(n = 5), c.pit, c.bol, c.var, c.cave(n = 6), c.cave(n = 7), c.cave(n = 8), c.end], # fim da história
+          [c.beg, c.zvam, c.fig(), c.end], # fim da história
           [], # [c.ceb, c.cas, c.doc], # passatempo
           [], # [c.ceb, c.mon, c.cas, c.mag, c.marceb, c.xav, c.bid], # correio
           [], # [c.cas, c.ceb, c.mon, c.mag], # correio de novo
@@ -48,7 +48,7 @@ pages3 = [[c.beg, c.pceb, c.ceb, c.mon, c.cas, c.end], # capa
           [c.pen],
           [c.pen, c.fra],
           [c.pen, c.fra, c.zvam, c.mum, c.zcav],
-          [c.pen, c.fra, c.zvam, c.mum, c.zcav, c.lob, c.mor, c.alm, 'Fantasma 1', 'Fantasma 2', c.end], # fim da história
+          [c.pen, c.fra, c.zvam, c.mum, c.zcav, c.lob, c.mor, c.alm, c.cb + 'Fantasma 1', c.cb + 'Fantasma 2', c.end], # fim da história
           [],
           [c.beg, c.mon, c.ceb, c.cas, c.san],
           [c.mon, c.ceb, c.cas, c.san, c.end], # fim da história
@@ -66,8 +66,8 @@ pages3 = [[c.beg, c.pceb, c.ceb, c.mon, c.cas, c.end], # capa
           [c.hum],
           [c.hum],
           [c.hum, c.tar], # tarugo em pensamento
-          [c.hum, 'Salva-vidas'], # tem um circo todo em pensamento
+          [c.hum, c.fig(), c.crowd()], # tem um circo todo em pensamento (chamei de multidão, mas não sei quantos caras aparecem)
           [c.hum],
-          [c.hum, 'Tritão 1'],
-          [c.hum, c.fat(), c.child(), 'Tritão 1', 'Tritão 2', 'Tritão 3', c.end], # fim da história
+          [c.hum, c.cb + 'Tritão 1'],
+          [c.hum, c.fat(), c.child(), c.cb + 'Tritão 1', c.cb + 'Tritão 2', c.cb + 'Tritão 3', c.end], # fim da história
           [c.beg, c.pen, c.alm, c.zvam, c.end]] # tirinha final

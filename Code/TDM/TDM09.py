@@ -3,7 +3,7 @@ from Functions.class_characters import characters
 
 c = characters()
 c.reset()
-c.comic_book = 'gibi 9'
+c.comic_book = '#tdm09'
 
 pages9 = [[c.beg, c.ceb, c.cas, c.mon, 'Cebolinha do Futuro', c.end],
           [],
@@ -43,18 +43,18 @@ pages9 = [[c.beg, c.ceb, c.cas, c.mon, 'Cebolinha do Futuro', c.end],
           [], # [c.ast, c.min, c.franj] # passatempo
           [],
           [c.beg, c.mon, c.ceb],
-          [c.mon, c.ceb, c.mag, c.san, 'Pássaro', 'Abelha 1', 'Abelha 2', 'Passarinho 1', 'Passarinho 2', c.end],
+          [c.mon, c.ceb, c.mag, c.san, c.anim(), c.anim(), c.anim(), c.anim(), c.anim(), c.end],
           [c.pit, c.mau], # aqui não tem nem título nem fim
-          [c.beg, c.pit, c.thu, c.bol, 'Mamute Mamu', 'Ratinho'],
-          [c.pit, 'Mamute Mamu', 'Ratinho'],
-          [c.pit, 'Dinossauro 1', 'Dinossauro 2', 'Tchako 1'], # considerei tchako como espécie e não nome
-          [c.pit, 'Tchako 1', 'Tchako 2', 'Tchako 3', 'Tchako 4'],
-          [c.pit, 'Tchako 1', 'Tchako 2', 'Gigante'],
-          [c.pit, 'Gigante', 'Tchako 1', 'Tchako 2', 'Tchako 3'],
-          [c.pit, 'Gigante', 'Tchako 1', 'Tchako 2', 'Tchako 3'],
-          [c.pit, 'Gigante', 'Tchako 1', 'Tchako 2', 'Tchako 3', 'Tchako 4', 'Tchako 5', 'Tchako 6', 'Tchako 7', 'Mamute Mamu'],
-          [c.pit, 'Gigante', 'Tchako 1', 'Tchako 2', 'Tchako 3', 'Tchako 4', 'Tchako 5', 'Tchako 6', 'Tchako 7', 'Tchako 8', 'Mamute Mamu', 'Alienígena', 'Dinossauro 3', c.fig(), c.fig(), c.fig()],
-          [c.pit, 'Índio', c.mau, c.ast, c.end],
+          [c.beg, c.pit, c.thu, c.bol, c.dino(), c.anim()],
+          [c.pit, c.dino(n = 1), c.anim(add = 0)],
+          [c.pit, c.dino(), c.dino(), c.cb + 'Tchako 1'], # considerei tchako como espécie e não nome
+          [c.pit, c.cb + 'Tchako 1', c.cb + 'Tchako 2', c.cb + 'Tchako 3', c.cb + 'Tchako 4'],
+          [c.pit, c.cb + 'Tchako 1', c.cb + 'Tchako 2', c.cb + 'Gigante'],
+          [c.pit, c.cb + 'Gigante', c.cb + 'Tchako 1', c.cb + 'Tchako 2', c.cb + 'Tchako 3'],
+          [c.pit, c.cb + 'Gigante', c.cb + 'Tchako 1', c.cb + 'Tchako 2', c.cb + 'Tchako 3'],
+          [c.pit, c.cb + 'Gigante', c.cb + 'Tchako 1', c.cb + 'Tchako 2', c.cb + 'Tchako 3', c.cb + 'Tchako 4', c.cb + 'Tchako 5', c.cb + 'Tchako 6', c.cb + 'Tchako 7', c.dino(n = 1)],
+          [c.pit, c.cb + 'Gigante', c.cb + 'Tchako 1', c.cb + 'Tchako 2', c.cb + 'Tchako 3', c.cb + 'Tchako 4', c.cb + 'Tchako 5', c.cb + 'Tchako 6', c.cb + 'Tchako 7', c.cb + 'Tchako 8', c.dino(n = 1), c.cb + 'Alienígena', c.dino(), c.fig(), c.fig(), c.fig()],
+          [c.pit, c.cb + 'Índio', c.mau, c.ast, c.end],
           [],
           [c.beg, c.mon, c.ceb],
           [c.mon, c.ceb, c.end],
@@ -63,11 +63,11 @@ pages9 = [[c.beg, c.ceb, c.cas, c.mon, 'Cebolinha do Futuro', c.end],
           [c.beg, c.cas, c.anj, c.end],
           [c.beg, c.mon],
           [c.mon, c.ceb, c.cas],
-          [c.mon, ], #PRIMAKI (gibi 9 == número 28) ver linhas 70 e 72 também
+          [c.mon, ], #PRIMAKI (gibi 9 == número 28) ver linha 72 também
           [c.mon, c.pmon, c.mmon, c.moca, c.san],
           [c.mon, c.cas, c.ceb, c.san, c.carfru], # cascão e cebolinha só em fala
           [c.mon, c.mag, c.carfru],
-          [c.mon, c.luc, c.ceb, 'Marimbondo', 'Alfacinho', 'Fabinho Boa Pinta'], #PRIMAKI
+          [c.mon, c.luc, c.ceb, c.anim(), c.cb + 'Alfacinho', c.fabbp],
           [c.mon],
           [c.mon, c.mau, c.end], # maurício ficava fazendo as perguntas em quadradinhos no canto superior esquerdo, devo incluir ele?
           [c.beg, c.mon, c.moca, c.luc, c.mag, c.end]] # tirinha final

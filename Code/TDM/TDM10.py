@@ -3,7 +3,7 @@ from Functions.class_characters import characters
 
 c = characters()
 c.reset()
-c.comic_book = 'gibi 10'
+c.comic_book = '#tdm10'
 
 pages10 = [[c.beg, c.cas, c.ceb, c.end],
 	   [],
@@ -28,13 +28,13 @@ pages10 = [[c.beg, c.cas, c.ceb, c.end],
 	   [c.san, c.cas, c.ceb, c.mon],
 	   [c.san, c.cas, c.ceb, c.mon, c.shade(), c.shade()],
 	   [c.san, c.cas, c.ceb, c.mon] + c.shades(6) + [c.end], # end no final só por padrão meu mesmo, mas poderia ser no meio ;-)
-	   [c.beg, c.chi, c.child(), 'Cachorro', c.gis, c.mim, c.tor, 'Burro', 'Onça', 'Pássaro 1', 'Pássaro 2', 'Pássaro 3', 'Borboleta', c.end],
+	   [c.beg, c.chi, c.child(), c.anim(), c.gis, c.mim, c.tor, c.anim(), 'Onça', c.anim(), c.anim(), c.anim(), c.anim(), c.end],
 	   [],
 	   [c.beg, c.bid, c.zesq],
 	   [c.bid, c.zesq],
 	   [c.zesq, c.child()],
-	   [c.zesq, 'Passarinho Amarelo'],
-	   [c.zesq, 'Passarinho Amarelo', c.bid],
+	   [c.zesq, c.anim()],
+	   [c.zesq, c.anim(add = 0), c.bid],
 	   [c.zesq, c.bid, c.duq, c.end], #PRIMAKI, help
 	   [c.beg, c.cra, c.end],
 	   [],
@@ -42,8 +42,8 @@ pages10 = [[c.beg, c.cas, c.ceb, c.end],
 	   [], # [c.ceb, c.mag, c.xav, 'Muleke estranho'], # correio
 	   [], # [c.ast, c.mon, c.ceb], # passatempos
 	   [],
-	   [c.beg, c.zvam, 'Mulher 1'],
-	   [c.pen, c.zvam, 'Mulher 1'],
+	   [c.beg, c.zvam, c.cb + 'Mulher 1'],
+	   [c.pen, c.zvam, c.cb + 'Mulher 1'],
 	   [c.pen, c.zvam],
 	   [c.pen, c.zvam],
 	   [c.pen, c.zvam],
@@ -51,15 +51,15 @@ pages10 = [[c.beg, c.cas, c.ceb, c.end],
 	   [c.pen, c.zvam, c.mum, c.fra],
 	   [c.fra, c.pen, c.zvam, c.lob],
 	   [c.pen, c.zvam],
-	   [c.pen, c.zcav, c.zvam, 'Mulher 2', c.end],
-	   [c.beg, c.mar, c.jer, 'Tia do Jeremias', 'Mulher 3'],
+	   [c.pen, c.zcav, c.zvam, c.cb + 'Mulher 2', c.end],
+	   [c.beg, c.mar, c.jer, 'Tia do Jeremias', c.cb + 'Mulher 3'],
 	   [c.mar, 'Tia do Jeremias', c.mag, c.tit, c.xav],
 	   [c.mag, c.tit, c.xav, c.ceb, ], #PRIMAKI, help
 	   [c.ceb, c.hum, c.san],
 	   [c.mon, c.san, c.ceb, 'Tia do Jeremias', c.tit, c.mar, c.end],
 	   [],
-	   [c.beg, 'Homem 1', c.child()],
-	   ['Mulher 4', 'Homem 2', 'Médico', c.child(), c.child(), 'Cachorrinho', 'Âncora da TV', c.fig(), c.fat(), c.child(), c.mor, c.end],
+	   [c.beg, c.cb + 'Homem 1', c.child()],
+	   [c.cb + 'Mulher 4', c.cb + 'Homem 2', c.fig(), c.child(), c.child(), c.anim(), c.fig(), c.fig(), c.fat(), c.child(), c.mor, c.end],
 	   [c.beg, c.ceb, c.cas, c.pceb],
 	   [c.ceb, c.cas, c.pceb],
 	   [c.ceb, c.cas],

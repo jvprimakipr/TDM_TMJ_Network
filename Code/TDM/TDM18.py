@@ -3,7 +3,7 @@ from Functions.class_characters import characters
 
 c = characters()
 c.reset()
-c.comic_book = 'gibi 18'
+c.comic_book = '#tdm18'
 
 pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [],
@@ -29,11 +29,11 @@ pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [c.mag, 'Monika Bond', 'C-bola', 'Cecê-boy', c.san],
 		   ['Monika Bond', c.san, 'Congue-Congue'],
 		   ['C-bola', 'Invasores do Espaço'], # 8 invasores e uma nava mãe
-		   ['Cecê-boy', 'Sapinho'] + c.figs(6),
+		   ['Cecê-boy', c.anim()] + c.figs(6),
 		   [c.mag, 'Maga Rári', 'Fantasmildos'], # 3 fantasmas
 		   ['Monika Bond', 'Congue-Congue', c.san],
 		   ['C-bola', 'Etê da Nava Mãe', 'Invasores do Espaço'],
-		   ['Cecê-boy', 'Sapinho', c.fig(), c.fig()],
+		   ['Cecê-boy', c.anim(add = 0), c.fig(), c.fig()],
 		   [c.mag, 'Maga Rári', 'Fantasmildos'],
 		   [c.spa, c.san, 'Monika Bond'],
 		   [c.spa, c.san, 'Monika Bond', 'C-bola', 'Invasores do Espaço'],
@@ -49,7 +49,7 @@ pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [], # [c.naj, c.mon] # passatempo
 		   [],
 		   [c.beg, c.chi, 'Onça'],
-		   [c.chi, 'Onça', 'Jacaré', c.end],
+		   [c.chi, 'Onça', c.anim(), c.end],
 		   [c.beg, c.ceb, c.anj, 'Anjo da Guarda do Anjinho', c.end],
 		   [],
 		   [c.beg, c.mon, c.san, c.ceb, c.cas],
@@ -58,10 +58,10 @@ pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [c.mon, c.ceb, c.cas, 'Cipolino', 'Gastão'],
 		   [c.mon, c.ceb, c.cas, 'Cipolino', 'Gastão', c.san, c.end],
 		   [c.beg, c.pit],
-		   [c.pit, c.zcav, 'Dinossauro Roxo'], # zcav em pensamento (na real pode ser um esqueleto qualquer)
-		   [c.pit, 'Dinossauro Roxo', 'Dinossaurinho Roxo 1', 'Dinossaurinho Roxo 2', 'Dinossauro Verde'],
-		   [c.pit, 'Dinossauro Verde', 'Planta Carnívora'],
-		   [c.pit, c.fig(), c.fig(), c.thu, 'Dinossaurinho Roxo 1', 'Dinossaurinho Roxo 2', c.end], # figurantes são homens das cavernas
+		   [c.pit, c.zcav, c.dino()], # zcav em pensamento (na real pode ser um esqueleto qualquer)
+		   [c.pit, c.dino(add = 0), c.dino(), c.dino(), c.dino()],
+		   [c.pit, c.dino(add = 0), c.cb + 'Planta Carnívora'],
+		   [c.pit, c.fig(), c.fig(), c.thu, c.dino(add = -1), c.dino(add = -2), c.end], # figurantes são homens das cavernas
 		   [c.beg, c.ceb, c.mag, c.mon, c.san, c.cas, c.xav, c.end],
 		   [],
 		   [c.beg, c.ceb],
@@ -69,7 +69,7 @@ pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [c.ceb, c.cas, c.mon, c.san],
 		   [c.ceb, c.mon, c.san],
 		   [c.ceb, c.mon, c.san],
-		   [c.ceb, 'Alien Verde - filho', 'Alien Verde - mãe', c.end], # a mãe só em voz e o filho só em mão saindo da nave
+		   [c.ceb, c.cb + 'Alien Verde - filho', c.cb + 'Alien Verde - mãe', c.end], # a mãe só em voz e o filho só em mão saindo da nave
 		   [c.beg, c.nim, c.cas, c.mdoc, c.end],
 		   [],
 		   []]

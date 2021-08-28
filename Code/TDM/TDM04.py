@@ -3,9 +3,9 @@ from Functions.class_characters import characters
 
 c = characters()
 c.reset()
-c.comic_book = 'gibi 4'
+c.comic_book = '#tdm04'
 
-pages4 = [[c.beg, c.cas, c.ceb, c.mon, 'Duende', 'Múmia', c.end], # capa
+pages4 = [[c.beg, c.cas, c.ceb, c.mon, 'Duende', c.cb + 'Múmia', c.end], # capa
           [],
           [c.mon], # introdução
           [c.beg, c.mon],
@@ -27,15 +27,15 @@ pages4 = [[c.beg, c.cas, c.ceb, c.mon, 'Duende', 'Múmia', c.end], # capa
           ['Duende', c.mon, c.child(), c.child(), c.ceb, c.cas],
           ['Duende', c.mon, c.ceb, c.cas],
           ['Duende', c.mon, c.ceb, c.cas],
-          ['Duende', 'Duende 2', 'Duende 3', 'Duende 4'],
-          ['Duende', 'Duende 2', 'Duende 3', 'Duende 4', 'Duende 5', 'Papai Noel'],
-          ['Duende', 'Duende 2', 'Duende 3', 'Duende 4', 'Duende 5', 'Duende 6', 'Duende 7', 'Papai Noel'],
-          ['Duende', 'Duende 2', 'Duende 3', 'Duende 4', 'Duende 5', 'Papai Noel'],
-          ['Duende', 'Duende 2', 'Duende 3', 'Papai Noel'],
-          ['Papai Noel', 'Rena 1', 'Rena 2', 'Rena 3', 'Duende', c.mon, c.ceb, c.cas, c.end], # fim da história
+          ['Duende', c.cb + 'Duende 2', c.cb + 'Duende 3', c.cb + 'Duende 4'],
+          ['Duende', c.cb + 'Duende 2', c.cb + 'Duende 3', c.cb + 'Duende 4', c.cb + 'Duende 5', 'Papai Noel'],
+          ['Duende', c.cb + 'Duende 2', c.cb + 'Duende 3', c.cb + 'Duende 4', c.cb + 'Duende 5', c.cb + 'Duende 6', c.cb + 'Duende 7', 'Papai Noel'],
+          ['Duende', c.cb + 'Duende 2', c.cb + 'Duende 3', c.cb + 'Duende 4', c.cb + 'Duende 5', 'Papai Noel'],
+          ['Duende', c.cb + 'Duende 2', c.cb + 'Duende 3', 'Papai Noel'],
+          ['Papai Noel', c.cb + 'Rena 1', c.cb + 'Rena 2', c.cb + 'Rena 3', 'Duende', c.mon, c.ceb, c.cas, c.end], # fim da história
           [],
           [c.beg, c.cas],
-          [c.cas, 'São Paulo', 'Anjinho', c.end], # fim da história
+          [c.cas, c.spa, c.anj, c.end], # fim da história
           [c.beg, c.ceb, c.cas, c.mon, c.end], # fim da história
           [],
           [],
@@ -56,12 +56,12 @@ pages4 = [[c.beg, c.cas, c.ceb, c.mon, 'Duende', 'Múmia', c.end], # capa
           [c.tv, c.mtv, c.blo, c.end], # fim da história
           [],
           [],
-          [c.beg, c.cas, c.ceb, 'Enxame de abelhas', c.end], # fim da história
-          [c.beg, c.chi, 'Galo', 'Cachorro', 'Lesma'],
-          [c.chi, 'Tartaruga', 'Morcego', 'Formigas', 'Coruja'],
-          [c.chi, 'Coelho', 'Macaco 1', 'Macaco 2', 'Preguiça', 'Cavalo'], # dois macacos
-          ['Pato', c.chi, 'Mula', 'Porco', 'Gata', 'Gatinho 1', 'Gatinho 2', 'Gatinho 3'], # 3 filhotes de gato e a gata
-          ['Bode 1', 'Bode 2', c.chi, c.ros, 'Pássaro 1', 'Pássaro 2', c.end], # dois bodes e dois pássaros / fim da história
+          [c.beg, c.cas, c.ceb, c.anim(), c.end], # fim da história
+          [c.beg, c.chi, c.anim(), c.anim(), c.anim()],
+          [c.chi, c.anim(), c.anim(), c.anim(), c.anim()],
+          [c.chi, c.anim(), c.anim(), c.anim(), c.anim(), c.anim()],
+          [c.chi, c.anim(), c.anim(), c.anim(), c.anim(), c.anim(), c.anim(), c.anim()],
+          [c.chi, c.ros, c.anim(), c.anim(), c.anim(), c.anim(), c.end], # fim da história
           [c.beg, c.pit, 'Gronk'],
           [c.pit, 'Gronk'],
           [c.pit, 'Gronk', c.end], # fim da história

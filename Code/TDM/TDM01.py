@@ -3,7 +3,7 @@ from Functions.class_characters import characters
 
 c = characters()
 c.reset()
-c.comic_book = 'gibi 1'
+c.comic_book = '#tdm01'
 
 pages1 = [[c.beg, c.viv, c.mon, c.ceb, c.mag, c.end], # capa
           [],
@@ -28,22 +28,22 @@ pages1 = [[c.beg, c.viv, c.mon, c.ceb, c.mag, c.end], # capa
           [c.viv, c.mon, c.mag, c.ceb, c.cas, c.att(n = 4)],
           [c.viv, c.mon, c.mag, c.ceb, c.cas],
           [c.viv, c.mon, c.mag, c.ceb, c.cas],
-          [c.viv, c.mon, c.mag, c.ceb, c.cas, 'Dinossauro 1 - gibi 1', 'Dinossauro 2 - gibi 1', 'Dinossauro 3 - gibi 1'],
-          [c.viv, c.mag, 'Dinossauro 1 - gibi 1', 'Dinossauro 2 - gibi 1', 'Dinossauro 3 - gibi 1', 'Dinossauro 4 - gibi 1'],
+          [c.viv, c.mon, c.mag, c.ceb, c.cas, c.anim(), c.anim(), c.anim()],
+          [c.viv, c.mag, c.anim(add = -2), c.anim(add = -1), c.anim(add = 0), c.anim()],
           [c.viv, c.bor, c.mag],
           [c.viv, c.bor, c.mon, c.mag, c.ceb, c.cas, c.end],
           [],
           [],
           [c.beg, c.pit],
           [c.pit],
-          [c.pit, 'Dinossauro verde'],
-          [c.pit, 'Dinossauro verde', c.end],
+          [c.pit, c.dino()],
+          [c.pit, c.dino(add = 0), c.end],
           [],
           [],
           [],
           [],
           [c.beg, c.pen],
-          [c.pen, 'Gato laranja', c.end],
+          [c.pen, c.anim(), c.end],
           [c.beg, c.ceb, c.floq],
           [c.ceb, c.floq, c.end],
           [c.beg, c.dud, c.mdud],
@@ -54,14 +54,14 @@ pages1 = [[c.beg, c.viv, c.mon, c.ceb, c.mag, c.end], # capa
           [],
           [c.beg, c.bid, c.franj, c.ceb],
           [c.bid, c.ceb, c.mon, c.cas, c.end],
-          [c.beg, c.ast, 'Monstro Verde Grande', 'Monstro Rosa'],
-          [c.ast, 'Monstro Rosa', 'Monstro Verde Pequeno', c.end],
-          [c.beg, c.zlel, c.fig(), c.fig(), c.att(), 'Galinha do Zé Lelé', 'Pintinho'],
-          [c.zlel, 'Galinha do Zé Lelé', c.att(n = 5), c.att(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.end],
+          [c.beg, c.ast, c.mons(), c.mons()],
+          [c.ast, c.mons(add = 0), c.mons(), c.end],
+          [c.beg, c.zlel, c.fig(), c.fig(), c.att(), c.gis, c.anim()],
+          [c.zlel, c.gis, c.att(n = 5), c.att(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.end],
           [],
-          [c.beg, c.zlel, 'Galinha do Zé Lelé', c.mlel, c.child(), c.child(), c.child(), c.child()],
-          [c.lob, 'Cachorro 1', 'Cachorro 2', 'Peixe', 'Pássaro', 'Menino de cabelo laranja e camisa verde'],
-          [c.lob, 'Cachorro 1', 'Cachorro 2', c.child(), c.fig(), c.end],
+          [c.beg, c.zlel, c.gis, c.mlel, c.child(), c.child(), c.child(), c.child()],
+          [c.lob, c.anim(), c.anim(), c.anim(), c.anim(), c.cb + 'Menino de cabelo laranja e camisa verde'], # PRIMAKI
+          [c.lob, c.anim(add = -3), c.anim(add = -2), c.child(), c.fig(), c.end],
           [c.beg, c.mon, c.franj, c.bid], # bidu e  franjinha em pensamento
           [c.mon, c.mag, c.min, c.ceb, c.floq, c.end], # só mônica e cebolinha, o resto é pensamento
           [c.beg, c.tin, c.pip],

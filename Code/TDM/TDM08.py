@@ -3,7 +3,7 @@ from Functions.class_characters import characters
 
 c = characters()
 c.reset()
-c.comic_book = 'gibi 8'
+c.comic_book = '#tdm08'
 
 pages8 = [[c.beg, c.mon, c.ceb, c.cas, c.mag, c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), c.child(), 'Planeta Terra', c.end],
           [],
@@ -15,11 +15,11 @@ pages8 = [[c.beg, c.mon, c.ceb, c.cas, c.mag, c.child(), c.child(), c.child(), c
           [c.child(), c.mot(), c.mon, c.san, c.ceb, c.mag, c.mag, 'Planeta Terra'],
           [c.mon, c.san, c.ceb, c.mag, c.mag, 'Planeta Terra'],
           [c.mon, 'Planeta Terra'],
-          ['Urso Polar', c.fig(), c.fig(), c.fig(), c.fig(), c.fig()],
+          [c.anim(), c.fig(), c.fig(), c.fig(), c.fig(), c.fig()],
           [c.mon, c.san, c.ceb, c.mag, c.mag, 'Planeta Terra'],
-          ['Planeta Terra', c.mcas, c.cas, c.mceb, c.pceb, c.ceb, c.mon, c.mcas, c.pcas, c.mag, 'Padeiro'],
+          ['Planeta Terra', c.mcas, c.cas, c.mceb, c.pceb, c.ceb, c.mon, c.mcas, c.pcas, c.mag, c.fig()],
           [c.child(), c.mon, c.san, c.ceb, c.mag, c.mag, 'Planeta Terra'],
-          [c.mon, c.ceb, 'Planeta Terra', c.san, c.mag, c.cas, 'Roteirista 1', 'Roteirista 2', 'Roteirista 3', 'Roteirista 4'],
+          [c.mon, c.ceb, 'Planeta Terra', c.san, c.mag, c.cas, c.cb + 'Roteirista 1', c.cb + 'Roteirista 2', c.cb + 'Roteirista 3', c.cb + 'Roteirista 4'],
           [c.mon, c.ceb, c.mag, c.cas, 'Planeta Terra', c.child(), c.child(), c.child(), c.child(), c.shade(), c.shade(), c.shade(), c.shade()],
           ['Planeta Terra', 'Lua', c.mon, c.ceb, c.cas, c.mag, c.end], # fim da história
           [c.beg, c.san, c.mon, c.ceb],
@@ -27,11 +27,11 @@ pages8 = [[c.beg, c.mon, c.ceb, c.cas, c.mag, c.child(), c.child(), c.child(), c
           [],
           [c.beg, c.anj, c.ceb], # cebolinha só em balão de fala
           [c.ceb, c.san, c.mon, c.anj],
-          [c.ceb, c.mon, c.san, c.anj, 'Anjinha', c.end], # fim da história
+          [c.ceb, c.mon, c.san, c.anj, c.cb + 'Anjinha', c.end], # fim da história
           [c.beg, c.mar],
           [c.mar],
           [c.mar],
-          [c.mar, 'Sapo'],
+          [c.mar, c.anim()],
           [c.mar, c.end], # fim da história
           [c.beg, c.naj, 'Comadre Cigarra'],
           [c.naj, 'Comadre Cigarra'],
@@ -53,11 +53,11 @@ pages8 = [[c.beg, c.mon, c.ceb, c.cas, c.mag, c.child(), c.child(), c.child(), c
           [c.mum, c.zvam, c.pen],
           [c.mum, c.zvam, c.pen, c.lob], # pensando no lobi
           [c.mum, c.zvam, c.pen, c.lob, c.fig(), c.shade(), c.end], # fim da história
-          [c.beg, c.mceb, c.ceb, 'Médico', c.cas, c.end], # fim da história
-          [c.beg, c.bid, 'Cachorro 1', c.child()], # criança só em balão de fala
-          [c.bid, 'Cachorro 1', 'Cachorro 2', c.fig(), c.fig()], # o segundo figurante só em balão de fala
-          [c.bid, 'Cachorro 2', 'Cachorro 3', c.fig()], # figurante só em balão de fala
-          [c.bid, 'Cachorro 3', 'Cachorro 4', c.fig(), c.fig(), c.fig(), c.fig(), c.fig(), c.fig(), c.fig(), c.fig(), c.end], # figurantes em balão de fala / fim da história
+          [c.beg, c.mceb, c.ceb, c.fig(), c.cas, c.end], # fim da história
+          [c.beg, c.bid, c.anim(), c.child()], # criança só em balão de fala
+          [c.bid, c.anim(add = 0), c.anim(), c.fig(), c.fig()], # o segundo figurante só em balão de fala
+          [c.bid, c.anim(add = 0), c.anim(), c.fig()], # figurante só em balão de fala
+          [c.bid, c.anim(add = 0), c.anim(), c.fig(), c.fig(), c.fig(), c.fig(), c.fig(), c.fig(), c.fig(), c.fig(), c.end], # figurantes em balão de fala / fim da história
           [c.beg, c.chi, c.mchi],
           [c.chi, c.hir],
           [c.chi, c.gen, c.ros],

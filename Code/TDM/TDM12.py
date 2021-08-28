@@ -3,7 +3,7 @@ from Functions.class_characters import characters
 
 c = characters()
 c.reset()
-c.comic_book = 'gibi 12'
+c.comic_book = '#tdm12'
 
 pages12 = [[c.beg, c.cas, c.ceb, c.marcas, c.mon, c.mag, c.end],
            [],
@@ -36,20 +36,20 @@ pages12 = [[c.beg, c.cas, c.ceb, c.marcas, c.mon, c.mag, c.end],
            [c.zlui, c.pceb, c.marceb, c.end], # e a moça?
            [c.beg, c.san, c.mon, c.ceb],
            [c.san, c.mon, c.ceb, c.end],
-           [c.beg, c.cas, 'Pássaro 1', 'Pássaro 2', 'Pássaro 3', c.end],
+           [c.beg, c.cas, c.anim(), c.anim(), c.anim(), c.end],
            [], # [c.tin, c.zec, c.rol] # passatempos
            [], # [c.bid, c.ani, c.tit, c.mon] # correio
            [], # [c.dor, c.lou] # correio (ver quem é o cara estranho ali)
-           [c.beg, c.chi, c.zlel, 'Cavalo'], # duende narrando entra?
-           [c.chi, c.zlel, 'Cavalo', 'Bruxo'],
-           [c.chi, c.zlel, 'Cavalo', 'Bruxo'],
-           [c.chi, c.zlel, 'Cavalo'], # abóboras com pernas contam?
-           [c.chi, c.zlel, 'Cavalo', 'Duende', c.end], # idem ^^
+           [c.beg, c.chi, c.zlel, c.anim()], # duende narrando entra?
+           [c.chi, c.zlel, c.anim(add = 0), c.cb + 'Bruxo'],
+           [c.chi, c.zlel, c.anim(add = 0), c.cb + 'Bruxo'],
+           [c.chi, c.zlel, c.anim(add = 0)], # abóboras com pernas contam?
+           [c.chi, c.zlel, c.anim(add = 0), 'Duende', c.end], # idem ^^
            [],
            [c.beg, c.bid, c.mag],
            [c.mag, c.bid, c.min],
-           [c.mag, c.min, c.chov, 'Peixe 1', 'Peixe 2', 'Peixe 3', 'Peixe 4', 'Peixe 5', 'Peixe 6', 'Peixe 7', 'Peixe 8', 'Peixe 9'],
-           [c.mag, c.bid, c.min, c.chov, 'Padeiro', c.end], # esse padeiro tem nome?
+           [c.mag, c.min, c.chov, c.anim(), c.anim(), c.anim(), c.anim(), c.anim(), c.anim(), c.anim(), c.anim(), c.anim()],
+           [c.mag, c.bid, c.min, c.chov, c.fig(), c.end], # esse padeiro tem nome?
            [c.beg, c.pen, c.zvam],
            [c.pen, c.zvam],
            [c.pen, c.zvam],
@@ -61,7 +61,7 @@ pages12 = [[c.beg, c.cas, c.ceb, c.marcas, c.mon, c.mag, c.end],
            [],
            [c.beg, c.ceb, c.cas, c.end],
            [c.beg, c.ceb, c.mon, c.floq, c.san],
-           [c.ceb, c.san, c.mon, 'Borboleta', c.end],
+           [c.ceb, c.san, c.mon, c.anim(), c.end],
            [c.beg, c.mon, c.san],
            [c.mon],
            [c.mon, c.moca],
