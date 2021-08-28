@@ -24,7 +24,7 @@ cap4 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.end], #Capa - A Aventura Continua!
         [c.cap, c.yuk],
         [c.mon, c.ceb, c.mag, c.cas] + c.shades(3) + c.figs(2) + [c.end]] #5. O Unicórnio Gêmeo Saltitante - Pág 26
 cap5 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.van, c.val, c.ID('Elfo'), c.ID('Bárbaro'), c.ID('Anão 1'), c.ID('Anão 2'), c.anim(), c.anim()],
-        [c.beg, c.mon, c.ceb, c.mag, c.cas, c.van, c.val, c.ID('Elfo'), c.ID('Bárbaro'), c.ID('Anão 1'), c.ID('Anão 2'), c.anim(1), c.anim(2)],
+        [c.mon, c.ceb, c.mag, c.cas, c.van, c.val, c.ID('Elfo'), c.ID('Bárbaro'), c.ID('Anão 1'), c.ID('Anão 2'), c.anim(1), c.anim(2)],
         [c.ceb, c.val],
         [c.ceb, c.van],
         [c.mon, c.ceb, c.mag, c.cas],
