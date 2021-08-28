@@ -65,7 +65,7 @@ cap1 = [[c.beg, c.mon, c.ceb, c.mag, c.cas, c.tit, c.den, c.end], #Capa - As Ave
         [c.mon, c.ceb, c.den, c.mmon],
         [c.mon, c.ceb, c.mag, c.den, c.marcas],
         [c.end]]
-cap2 = [[c.mon, c.mag] + c.figs(2), #2. Os meninos são todos iguais! - Pág 68
+cap2 = [[c.beg, c.mon, c.mag] + c.figs(2), #2. Os meninos são todos iguais! - Pág 68
         [c.mon, c.mag, c.shade()],
         [c.mon, c.mag, c.den],
         [c.mon, c.mag, c.den],
@@ -112,8 +112,8 @@ cap2 = [[c.mon, c.mag] + c.figs(2), #2. Os meninos são todos iguais! - Pág 68
         [c.mon, c.ceb, c.cas],
         [2, [c.mon, c.cas], [c.mon, c.ceb, c.mag, c.cas, c.tit, c.den, c.fig(add=-4), c.fig(add=-3), c.fig(add=-2), c.fig(add=-1), c.fig(add=0)] + c.figs(2)],
         [c.mon, c.mag, c.den],
-        [c.mon, c.ceb, c.mag, c.cas, c.tit, c.den, c.fig(add=-2), c.fig(add=0)]]
-cap3 = [[c.ceb, c.cas, c.tit], #3. Pai! Me empresta a chave do carro? - Pág 116
+        [c.mon, c.ceb, c.mag, c.cas, c.tit, c.den, c.fig(add=-2), c.fig(add=0), c.end]]
+cap3 = [[c.beg, c.ceb, c.cas, c.tit], #3. Pai! Me empresta a chave do carro? - Pág 116
         [c.ceb, c.cas, c.tit, c.pceb],
         [c.ceb, c.cas, c.tit],
         [c.ceb, c.cas, c.tit, c.pceb],
@@ -124,7 +124,7 @@ cap3 = [[c.ceb, c.cas, c.tit], #3. Pai! Me empresta a chave do carro? - Pág 116
         [c.mon, c.ceb, c.cas, c.tit, c.floq],
         [c.ceb, c.cas, c.tit],
         [c.ceb, c.cas],
-        [c.cas, c.pcas],
+        [c.cas, c.pcas, c.end],
         [],
         [],
         [],
