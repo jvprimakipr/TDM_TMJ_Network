@@ -119,7 +119,7 @@ class characters:
         #Adultos
         self.fal = 'Prof Falconi'
         self.rub = 'Prof Rubens'
-        self.tea = 'Prof de Teatro'
+        self.jor = 'Prof Jorge'
         self.van = 'Vanda'
         self.val = 'Valéria'
         
@@ -401,11 +401,14 @@ class characters:
             return self.ID(f'Homem das Cavernas {self.caveman_number}')
 
     # Cria uma multidão, facilitando o acesso a muitos figurantes que se repetem em várias páginas
-    def crowd(self, n = 0, figs = 10, shades = 0, reset = False, name = ''):
+    def crowd(self, n = 0, name = '', reset = False, figs = 10, shades = 0, atts = 0, mots = 0, fats = 0, childs = 0, stus = 0, anims = 0,
+             mons = 0, dinos = 0, caves = 0):
         if reset:
             self.crowd_number = 0
             self.list_crowds = []
-        elif n == 0:
+        if n!= 0:
+            return self.list_crowds[n-1]
+        else:
             self.crowd_number += 1
             crowd = []
             if figs > 0:
@@ -419,10 +422,27 @@ class characters:
                     crowd += [self.ID(f'{name} {i}') for i in range(num+1, num+figs+1)]
             if shades > 0:
                 crowd += self.shades(shades)
+            if atts > 0:
+                crowd += [self.att() for i in range(atts)]
+            if mots > 0:
+                crowd += [self.mot() for i in range(mots)]
+            if fats > 0:
+                crowd += [self.fat() for i in range(fats)]
+            if childs > 0:
+                crowd += [self.child() for i in range(childs)]
+            if stus > 0:
+                crowd += [self.stu() for i in range(stus)]
+            if anims > 0:
+                crowd += [self.anim() for i in range(anims)]
+            if mons > 0:
+                crowd += [self.mon() for i in range(mons)]
+            if dinos > 0:
+                crowd += [self.dino() for i in range(dinos)]
+            if caves > 0:
+                crowd += [self.cave() for i in range(caves)]
             self.list_crowds.append(crowd)
             return crowd
-        else:
-            return self.list_crowds[n-1]
+            
     
     def reset(self):
         self.fig(reset = True)
