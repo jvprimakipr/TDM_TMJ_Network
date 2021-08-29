@@ -1,7 +1,7 @@
 class characters:
-    def __init__(self):
+    def __init__(self, cb = ''):
         # Auxiliar para diferenciar os gibis
-        self.comic_book = ''	
+        self.comic_book = cb
 
         # Auxiliares na marcação das histórias
         self.beg = 'begin'
@@ -36,6 +36,17 @@ class characters:
         self.mag = 'Magali'
         self.cas = 'Cascão'
         
+        # Secundárias (Feminino)
+        self.den = 'Denise'
+        self.mar = 'Marina'
+        self.marceb = 'Maria Cebolinha'
+        self.carfru = 'Carminha Frufru'
+        self.marcas = 'Maria Cascuda'
+        self.xab = 'Xabéu'
+        self.ani = 'Aninha'
+        self.dor = 'Dorinha'
+        self.ver = 'Verinha'
+        
         # Secundários (Masculino)
         self.franj = 'Franjinha'
         self.xav = 'Xaveco'
@@ -57,17 +68,6 @@ class characters:
         self.ber = 'Bernardinho'
         self.nicdem = 'Nico Demo'
         self.toni = 'Tonhão da Rua de Baixo'
-        
-        # Secundárias (Feminino)
-        self.den = 'Denise'
-        self.mar = 'Marina'
-        self.marceb = 'Maria Cebolinha'
-        self.carfru = 'Carminha Frufru'
-        self.marcas = 'Maria Cascuda'
-        self.xab = 'Xabéu'
-        self.ani = 'Aninha'
-        self.dor = 'Dorinha'
-        self.ver = 'Verinha'
         
         # Pais e Mães
         self.mmon = 'Dona Luísa'
