@@ -35,14 +35,14 @@ cap1 = [[c.beg, c.mon, c.ceb, c.toni, c.end], #Capa - O Príncipe Perfeito
         [c.ceb, c.cas, c.mceb],
         [c.ceb, c.cas, c.mceb, c.pceb],
         [c.ceb, c.cas],
-        [c.mon, c.ceb, c.cas, c.san],
+        [c.mon, c.ceb, c.cas],
         [c.ceb, c.cas, c.pceb],
-        [c.mon, c.san, c.end]]
-cap2 = [[c.beg, c.mon, c.toni, c.san], #2. Tonc - Pág 41
+        [c.mon, c.end]]
+cap2 = [[c.beg, c.mon, c.toni], #2. Tonc - Pág 41
         [c.mon, c.ton],
         [c.ceb, c.cas],
         [c.ceb, c.cas, c.xav],
-        [c.mon, c.ceb, c.cas, c.san] + c.crowd(figs=0, stus=10),
+        [c.mon, c.ceb, c.cas] + c.crowd(figs=0, stus=10),
         [c.mon, c.ceb, c.den, c.carfru, c.toni],
         [c.mon, c.ceb, c.mag, c.den, c.carfru, c.toni],
         [c.mon, c.ceb, c.toni],
