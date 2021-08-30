@@ -407,7 +407,7 @@ class characters:
         if reset:
             self.crowd_number = 0
             self.list_crowds = []
-        if n!= 0:
+        elif n!= 0:
             return self.list_crowds[n-1]
         else:
             self.crowd_number += 1
@@ -457,4 +457,4 @@ class characters:
         self.mons(reset = True)
         self.dino(reset = True)
         self.cave(reset = True)
-        self.crowd(reset = True)
+        #self.crowd(reset = True)
