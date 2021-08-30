@@ -136,6 +136,7 @@ class characters:
         self.rob = 'Robô'
         self.imp = 'Imperador Usagi'
         self.kam = 'Lorde Kamen'
+        self.cle = 'Cleópatra Esfíngia'
         
         ###############################
         ####### TURMA DOS PETS ########
