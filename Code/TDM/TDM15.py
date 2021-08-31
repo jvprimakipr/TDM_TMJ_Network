@@ -1,15 +1,10 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
-
-c = characters()
-c.reset()
-c.comic_book = '#tdm15'
-c.cb = c.comic_book + ' '
-
+c = characters('#tdm_34') #Capa
 pages15 = [[c.beg, c.anj, c.cas, c.ceb, c.mon, c.mag, c.san, c.end],
            [],
-           [c.anj, c.cas, c.ceb, c.mon, c.mag, c.cb + 'Anjinho Substituto'],
-           [c.beg, c.cas, c.ceb, c.mon, c.mag, c.mmag, c.fat(), c.child()] + c.shades(4),
+           [c.anj, c.cas, c.ceb, c.mon, c.mag, c.ID('Anjinho Substituto')],
+           [c.beg, c.cas, c.ceb, c.mon, c.mag, c.mmag, c.fat(), c.kid()] + c.shades(4),
            [c.cas, c.ceb, c.mon, c.mag],
            [c.cas, c.ceb, c.mon, c.mag, c.mot(), c.mot(), c.att()] + c.kids(4) + c.shades(4),
            [c.cas, c.ceb, c.mon, c.mag],
@@ -18,13 +13,13 @@ pages15 = [[c.beg, c.anj, c.cas, c.ceb, c.mon, c.mag, c.san, c.end],
            [c.mon, c.anj],
            [c.mon, c.anj, c.fat()] + c.kids(4),
            [c.mon, c.anj],
-           [c.mon, c.anj, c.child(), c.child()],
+           [c.mon, c.anj, c.kid(), c.kid()],
            [c.cas, c.ceb, c.mon, c.mag, c.anj],
            [c.cas, c.ceb, c.mon, c.mag, c.anj],
            [c.cas, c.ceb, c.mon, c.mag, c.anj],
            [c.anj] + [f'{c.comic_book} Anjo {i + 1}' for i in range(18)] + [c.end],
-           [c.beg, c.ast, c.mons()],
-           [c.ast, c.mons(add = 0), c.end],
+           [c.beg, c.ast, c.ali()],
+           [c.ast, c.ali(add = 0), c.end],
            [],
            [c.beg, c.pit, c.dino()],
            [c.pit, c.dino(n = 1), c.cave(n = 1)],
@@ -48,9 +43,9 @@ pages15 = [[c.beg, c.anj, c.cas, c.ceb, c.mon, c.mag, c.san, c.end],
            [c.mon],
            [c.mon, c.san, c.mmon, c.pmon, c.end],
            [c.beg, c.ceb, c.pceb, c.end],
-           [c.beg, c.nicdem, c.child()],
-           [c.nicdem, c.child(add = -1), c.child()],
-           [c.nicdem, c.child(add = -1), c.child(), c.end],
+           [c.beg, c.nicdem, c.kid()],
+           [c.nicdem, c.kid(add = -1), c.kid()],
+           [c.nicdem, c.kid(add = -1), c.kid(), c.end],
            [],
            [c.beg, 'Jimmy', c.bid],
            ['Jimmy', c.bid],
