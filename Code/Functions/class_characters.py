@@ -46,6 +46,8 @@ class characters:
         self.ani = 'Aninha'
         self.dor = 'Dorinha'
         self.ver = 'Verinha'
+        self.kei = 'Keiko'
+        self.tonica = 'Tonica'
         
         # Secundários (Masculino)
         self.franj = 'Franjinha'
@@ -68,6 +70,9 @@ class characters:
         self.ber = 'Bernardinho'
         self.nicdem = 'Nico Demo'
         self.toni = 'Tonhão da Rua de Baixo'
+        self.alf = 'Alfacinha'
+        self.tik = 'Tikara'
+        self.alv = 'Alvinho'
         
         # Pais e Mães
         self.mmon = 'Dona Luísa'
