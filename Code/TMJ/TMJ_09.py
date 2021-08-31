@@ -104,7 +104,7 @@ cap3 = [[c.beg, c.mon, c.ceb, c.carfru, c.toni], #3. A Escolha - Pág 83
         [c.ceb, c.toni],
         [c.ceb, c.toni],
         [c.ceb, c.toni],
-        [2, [c.mon, c.ceb, c.cas, c.toni, c.san], [c.ton, 'Pai do Toni', c.child(), c.child()]],
+        [2, [c.mon, c.ceb, c.cas, c.toni, c.san], [c.ton, 'Pai do Toni', c.kid(), c.kid()]],
         [c.ceb, c.toni],
         [c.ceb, c.toni],
         [c.ceb, c.toni],

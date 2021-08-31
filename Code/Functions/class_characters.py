@@ -14,7 +14,7 @@ class characters:
         self.attendant_number = 0
         self.father_number = 0
         self.mother_number = 0        
-        self.child_number = 0
+        self.kid_number = 0
         self.student_number = 0
         self.animal_number = 0
         self.alien_number = 0
@@ -257,9 +257,9 @@ class characters:
         self.pap = 'Papa-Capim'
         self.caf = 'Cafuné'
         self.jur = 'Jurema'
-        self.cai = 'Caiapopó'
         self.paj = 'Pajé'
         self.cac = 'Cacique'
+        self.cai = 'Caiapopó'
 
         ###############################
         ######## TURMA DA MATA ########
@@ -341,19 +341,19 @@ class characters:
             self.mother_number += 1
             return self.ID(f'Mãe {self.mother_number}')
     
-    def child(self, n = 0, add = '', reset = False):
+    def kid(self, n = 0, add = '', reset = False):
         if n != 0:
             return self.ID(f'Criança {n}')
         elif add != '':
-            return self.ID(f'Criança {self.child_number + add}')
+            return self.ID(f'Criança {self.kid_number + add}')
         elif reset:
-            self.child_number = 0
+            self.kid_number = 0
         else:
-            self.child_number += 1
-            return self.ID(f'Criança {self.child_number}')
+            self.kid_number += 1
+            return self.ID(f'Criança {self.kid_number}')
         
     def kids(self, n):
-        return [self.child() for i in range(n)]
+        return [self.kid() for i in range(n)]
     
     def stu(self, n = 0, add = '', reset = False):
         if n != 0:
@@ -426,7 +426,7 @@ class characters:
         return [self.cave() for i in range(n)]
 
     # Cria uma multidão, facilitando o acesso a muitos figurantes que se repetem em várias páginas
-    def crowd(self, n = 0, name = '', reset = False, figs = 10, shades = 0, atts = 0, mots = 0, fats = 0, childs = 0, stus = 0, anims = 0,
+    def crowd(self, n = 0, name = '', reset = False, figs = 10, shades = 0, atts = 0, mots = 0, fats = 0, kids = 0, stus = 0, anims = 0,
              alis = 0, dinos = 0, caves = 0):
         if reset:
             self.crowd_number = 0
@@ -453,8 +453,8 @@ class characters:
                 crowd += [self.mot() for i in range(mots)]
             if fats > 0:
                 crowd += [self.fat() for i in range(fats)]
-            if childs > 0:
-                crowd += [self.child() for i in range(childs)]
+            if kids > 0:
+                crowd += [self.kid() for i in range(kids)]
             if stus > 0:
                 crowd += [self.stu() for i in range(stus)]
             if anims > 0:
@@ -475,7 +475,7 @@ class characters:
         self.att(reset = True)
         self.mot(reset = True)
         self.fat(reset = True)
-        self.child(reset = True)
+        self.kid(reset = True)
         self.stu(reset = True)
         self.anim(reset = True)
         self.alis(reset = True)

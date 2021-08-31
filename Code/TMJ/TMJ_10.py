@@ -88,7 +88,7 @@ cap4 = [[c.beg, c.cas], #4. Le Parkour! - Pág 83
         [c.mon, c.cas],
         [c.mon, c.cas],
         [2, [] + c.figs(3), [c.mon, c.cas]],
-        [c.mon, c.cas, c.child()] + c.shades(2),
+        [c.mon, c.cas, c.kid()] + c.shades(2),
         [c.mon, c.cas], #DUVIDA
         [2, [c.mon, c.cas, c.san], [c.mon, c.cas]],
         [c.mon, c.cas],

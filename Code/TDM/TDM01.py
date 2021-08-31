@@ -14,7 +14,7 @@ his1 = [[c.beg, c.mon, c.ceb, c.mag, c.viv, c.end], [], [c.mon, c.ceb, c.mag, c.
         [c.mon, c.ceb, c.cas, c.viv],
         [c.mon, c.ceb, c.cas, c.viv],
         [c.mon, c.ceb, c.cas, c.viv, c.bor],
-        [c.mag, c.viv, c.bor, c.child()],
+        [c.mag, c.viv, c.bor, c.kid()],
         [c.mag, c.viv, c.bor],
         [c.mag, c.viv, c.bor, c.shade(), c.att()],
         [c.mag, c.viv, c.att()],
@@ -53,8 +53,8 @@ his8 = [[c.beg, c.zlel, 'Odorica', c.fig(), c.fig(), c.att(), c.anim()], #8. Um 
         [2, [c.zlel, 'Odorica', c.att(add=0)] + c.kids(10), [c.zlel, 'Odorica', c.att()]],
         [2, [c.zlel, 'Odorica'] + c.kids(4), [c.zlel, c.mlel, 'Odorica'], c.end],
         []]
-his9 = [[2, [c.lob] + c.anims(4), [c.lob, c.anim(add=-1), c.anim(add=0), c.child()], c.beg], #9. Bichinho de Estimação - Pág 56
-        [c.lob, c.anim(add=-1), c.anim(add=0), c.child(), c.fig(), c.end]]
+his9 = [[2, [c.lob] + c.anims(4), [c.lob, c.anim(add=-1), c.anim(add=0), c.kid()], c.beg], #9. Bichinho de Estimação - Pág 56
+        [c.lob, c.anim(add=-1), c.anim(add=0), c.kid(), c.fig(), c.end]]
 his10= [[2, [c.mon], [c.franj, c.bid], c.beg], #10. As Pegadas - Pág 58
         [2, [c.mag, c.min], [c.mon, c.ceb, c.floq], c.end]]
 his11= [[c.beg, c.tin, c.pip], #11. Sorria, meu bem! - Pág 60

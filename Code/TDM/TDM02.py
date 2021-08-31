@@ -1,16 +1,16 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
 c = characters('#tdm_21') #Capa
-his1 = [[c.beg, c.mag, 'Dud Van Winkle', c.child(), c.end], [], [c.beg, c.mag, c.dud], #1. Dud Van Winkle - Pág 3
+his1 = [[c.beg, c.mag, 'Dud Van Winkle', c.kid(), c.end], [], [c.beg, c.mag, c.dud], #1. Dud Van Winkle - Pág 3
         [c.mag, c.dud], [c.mag, c.dud],
-        [c.mag, c.dud, c.child()],
+        [c.mag, c.dud, c.kid()],
         [2, ['Dud Van Winkle'] + c.figs(2) + c.anims(5), [c.mag, c.dud]],
         [2, [c.mag, c.dud], ['Dud Van Winkle', c.fig()]],
         ['Dud Van Winkle'] + c.anims(4),
         [2, [c.mag, c.dud], ['Dud Van Winkle', c.anim()]],
         ['Dud Van Winkle'],
         [2, [c.mag, c.dud], [] + c.figs(3)],
-        [2, [c.fig(add=-1), c.fig(add=0)], [c.child(), c.mot()]],
+        [2, [c.fig(add=-1), c.fig(add=0)], [c.kid(), c.mot()]],
         [c.mau, 'Dud Van Winkle', c.fig()],
         [c.mau, 'Dud Van Winkle'],
         [2, ['Dud Van Winkle'], [c.mag, c.dud]],
