@@ -1,11 +1,6 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
-
-c = characters()
-c.reset()
-c.comic_book = '#tdm18'
-c.cb = c.comic_book + ' '
-
+c = characters('#tdm_37') #Capa
 pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [],
 		   [c.mon, c.mag, c.cas, 'Neto do Franjinha'],
@@ -15,7 +10,7 @@ pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [c.mag, 'Monika Bond', 'Robô carregando malas 1', 'Robô carregando malas 2', 'Abelha', 'Bidutronic'],
 		   [c.mag, 'Monika Bond', 'Abelha', 'Bidutronic', c.spa, c.san, 'Robô amarrando cadarço', c.fig()], # coelho é o sansão, mas no futuro
 		   [c.mag, 'Monika Bond', 'Abelha', 'Bidutronic', c.att(), c.att()], # os atendentes são robôs
-		   [c.mag, 'Monika Bond', 'Abelha', 'Bidutronic', c.att(), c.att(), c.child(), c.child(), c.mot(), c.fat()], # rt para os atendentes
+		   [c.mag, 'Monika Bond', 'Abelha', 'Bidutronic', c.att(), c.att(), c.kid(), c.kid(), c.mot(), c.fat()], # rt para os atendentes
 		   [c.mag, 'Monika Bond', 'Abelha', 'Bidutronic', c.spa, c.san],
 		   [c.mag, 'Monika Bond', 'Abelha', 'Bidutronic', c.san, c.franj, 'Fran J. Inha'], # franjinha só em imagem no pc
 		   ['Fran J. Inha', 'C-bola'],
@@ -33,7 +28,7 @@ pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   ['Cecê-boy', c.anim()] + c.figs(6),
 		   [c.mag, 'Maga Rári', 'Fantasmildos'], # 3 fantasmas
 		   ['Monika Bond', 'Congue-Congue', c.san],
-		   ['C-bola', 'Etê da Nava Mãe', 'Invasores do Espaço'],
+		   ['C-bola', 'Etê da Nave Mãe', 'Invasores do Espaço'],
 		   ['Cecê-boy', c.anim(add = 0), c.fig(), c.fig()],
 		   [c.mag, 'Maga Rári', 'Fantasmildos'],
 		   [c.spa, c.san, 'Monika Bond'],
@@ -61,7 +56,7 @@ pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [c.beg, c.pit],
 		   [c.pit, c.zcav, c.dino()], # zcav em pensamento (na real pode ser um esqueleto qualquer)
 		   [c.pit, c.dino(add = 0), c.dino(), c.dino(), c.dino()],
-		   [c.pit, c.dino(add = 0), c.cb + 'Planta Carnívora'],
+		   [c.pit, c.dino(add = 0), c.ID('Planta Carnívora')],
 		   [c.pit, c.fig(), c.fig(), c.thu, c.dino(add = -1), c.dino(add = -2), c.end], # figurantes são homens das cavernas
 		   [c.beg, c.ceb, c.mag, c.mon, c.san, c.cas, c.xav, c.end],
 		   [],
@@ -70,7 +65,7 @@ pages18 = [[c.beg, c.spa, c.mon, c.mag, c.cas, c.ceb, c.san, c.end],
 		   [c.ceb, c.cas, c.mon, c.san],
 		   [c.ceb, c.mon, c.san],
 		   [c.ceb, c.mon, c.san],
-		   [c.ceb, c.cb + 'Alien Verde - filho', c.cb + 'Alien Verde - mãe', c.end], # a mãe só em voz e o filho só em mão saindo da nave
+		   [c.ceb, c.ali(), c.ali(), c.end], #Duvida
 		   [c.beg, c.nim, c.cas, c.mdoc, c.end],
 		   [],
 		   []]
