@@ -1,16 +1,11 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
-
-c = characters()
-c.reset()
-c.comic_book = '#tdm06'
-c.cb = c.comic_book + ' '
-
+c = characters('#tdm_25') #Capa
 pages6 = [[c.beg, c.san, c.ceb, c.cas, c.mon, c.end], # capa
           [],
           [c.san, c.ceb, c.cas, c.mon], # introdução
-          [c.beg, c.child(), c.child(), c.mceb, c.ceb, c.cas, c.anim(), c.anim(), c.shade(), c.shade()], # figurantes na sombra
-          [c.ceb, c.cas, c.fig(), c.child(), c.child(), c.child(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.san],
+          [c.beg, c.kid(), c.kid(), c.mceb, c.ceb, c.cas, c.anim(), c.anim(), c.shade(), c.shade()], # figurantes na sombra
+          [c.ceb, c.cas, c.fig(), c.kid(), c.kid(), c.kid(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.san],
           [c.san, c.ceb, c.cas, c.mon, c.shade(), c.shade(), c.shade(), c.shade(), c.shade(), c.shade()],
           [c.san, c.ceb, c.cas, c.mon],
           [c.san, c.ceb, c.cas, c.mon],
@@ -19,17 +14,17 @@ pages6 = [[c.beg, c.san, c.ceb, c.cas, c.mon, c.end], # capa
           [c.ceb, c.cas, c.san],
           [c.ceb, c.cas, c.san],
           [c.ceb, c.cas, c.san],
-          [c.ceb, c.cas, c.san, c.child(), c.child()],
-          [c.ceb, c.cas, c.san, c.child(), c.att(), c.mon],
+          [c.ceb, c.cas, c.san, c.kid(), c.kid()],
+          [c.ceb, c.cas, c.san, c.kid(), c.att(), c.mon],
           [c.ceb, c.cas, c.san],
-          [c.ceb, c.cas, c.child()],
+          [c.ceb, c.cas, c.kid()],
           [c.ceb, c.cas],
           [c.ceb, c.cas],
           [c.ceb, c.cas, c.fig()],
           [c.ceb, c.cas, c.fig(add = 0), c.mon],
           [c.ceb, c.cas, c.fig(add = 0), c.mon],
           [c.ceb, c.cas, 'Cérebro do Cebolinha', c.mon],
-          [c.fig(add = 0), c.ceb, c.cas, c.mon, c.mceb, c.mot(), c.child(), c.shade(), c.end], # fim da história
+          [c.fig(add = 0), c.ceb, c.cas, c.mon, c.mceb, c.mot(), c.kid(), c.shade(), c.end], # fim da história
           [c.beg, c.san, c.ceb, c.mon, c.mag],
           [c.mag, c.mon, c.san],
           [c.mag, c.mon, c.san, c.cas, c.end], # fim da história
@@ -57,7 +52,7 @@ pages6 = [[c.beg, c.san, c.ceb, c.cas, c.mon, c.end], # capa
           [c.luc, c.mon, c.san, c.mag, c.den],
           [c.luc, c.mon, c.ceb, c.cas, c.franj],
           [c.luc],
-          [c.luc, c.min, c.bid, c.mag, c.mon, c.san, c.xav, c.cas, c.pxav, 'Banda', c.child(), c.anim(), 'Sequestradores'],
+          [c.luc, c.min, c.bid, c.mag, c.mon, c.san, c.xav, c.cas, c.pxav, 'Banda', c.kid(), c.anim(), 'Sequestradores'],
           [c.luc],
           [c.luc, c.ceb, c.cas, c.fig(), c.end], # fim da história
           [],
@@ -68,7 +63,7 @@ pages6 = [[c.beg, c.san, c.ceb, c.cas, c.mon, c.end], # capa
           [c.mon, c.ceb, c.cas],
           [c.mon, c.ceb, c.fabbp], # fabinho só em caricatura num balão de fala
           [c.mon, c.ceb, c.fabbp], # e agora ao vivo
-          [c.mon, c.ceb, c.child(), c.mot(), c.fig()],
+          [c.mon, c.ceb, c.kid(), c.mot(), c.fig()],
           [c.mon, c.ceb, c.mar],
           [c.mon, c.ceb, c.mar, c.end], # fim da história
           [c.beg, c.pen, c.zcav, c.end]] # tirinha final
