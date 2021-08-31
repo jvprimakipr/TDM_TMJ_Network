@@ -1,7 +1,7 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
 c = characters('#tdm_38') #Capa
-his1 = [[c.beg, c.mon, c.ceb, c.anj, 'Jonas (cadeirante)', c.end], [], [c.mon, c.ceb] + c.crowd(figs=0, childs=10) + c.shades(10), #Intro
+his1 = [[c.beg, c.mon, c.ceb, c.anj, 'Jonas (cadeirante)', c.end], [], [c.mon, c.ceb] + c.crowd(figs=0, kids=10) + c.shades(10), #Intro
         [c.beg, c.mon, 'João (irmão de Jonas)'], [c.mon, c.ceb, c.san], #1. Se Jonas não vai ao parque... - Pág 4
         [c.mon, c.ceb, c.san],
         [c.mon, c.ceb, c.san],
