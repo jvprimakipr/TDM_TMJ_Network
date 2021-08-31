@@ -59,7 +59,7 @@ his11= [[c.beg, c.hum], #11. Aquele barulhinho da conchinha do mar - Pág 57
         [c.hum],
         [c.hum],
         [c.hum],
-        [2, [c.hum, c.crowd()], [c.hum, c.fig()]],
+        [c.hum, c.fig()], #DUVIDA
         [c.hum],
         [c.hum, c.ID('Tritão 1')],
         [2, [c.hum, c.fat(), c.kid(), c.ID('Tritão 1')], [c.ID('Tritão 1'), c.ID('Tritão 2'), c.ID('Tritão 3')], c.end]]

@@ -10,45 +10,47 @@ class Graph_TM:
         self.communities = None
         self.node_weights = {}
         
-    def data2insert(self, file):
+    def data2insert(self, file, notid = False):
         cb = TM()
         cb.unpack(file)
         weights = []
         
         for row in cb.data.iterrows():
-        	if row[1][1] != '':
-        		weight = float(row[1][1])
-        		
-        	for i in range(2, len(row[1])):
-        		# i = 0: page
-        		# i = 1: weight
-        		# i > 1: characters
-        		if row[1][i] == '':
-        			break
-        		elif row[1][i] in self.node_weights:
-        			self.node_weights[row[1][i]] += weight
-        		else:
-        			self.node_weights[row[1][i]] = weight
-        			
-        		for j in range(i + 1, len(row[1])):
-        			if row[1][j] == '':
-        				break
-        			elif [row[1][i], row[1][j]] in self.edges2add:
-        				index = self.edges2add.index([row[1][i], row[1][j]])
-        				weights[index] += weight
-        			elif [row[1][j], row[1][i]] in self.edges2add:
-        				index = self.edges2add.index([row[1][j], row[1][i]])
-        				weights[index] += weight
-        			else:
-        				self.edges2add.append([row[1][i], row[1][j]])
-        				weights.append(weight)
+            if row[1][1] != '':
+                weight = float(row[1][1])
+                
+            for i in range(2, len(row[1])):
+                # i = 0: page
+                # i = 1: weight
+                # i > 1: characters
+                if row[1][i] == '':
+                    break
+                elif row[1][i][0] != '#' or not notid:
+                    if row[1][i] in self.node_weights:
+                        self.node_weights[row[1][i]] += weight
+                    else:
+                        self.node_weights[row[1][i]] = weight
+
+                    for j in range(i + 1, len(row[1])):
+                        if row[1][j] == '':
+                            break
+                        elif row[1][j][0] != '#' or not notid:
+                            if [row[1][i], row[1][j]] in self.edges2add:
+                                index = self.edges2add.index([row[1][i], row[1][j]])
+                                weights[index] += weight
+                            elif [row[1][j], row[1][i]] in self.edges2add:
+                                index = self.edges2add.index([row[1][j], row[1][i]])
+                                weights[index] += weight
+                            else:
+                                self.edges2add.append([row[1][i], row[1][j]])
+                                weights.append(weight)
 
         for i in range(len(self.edges2add)):
             self.edges2add[i].append(weights[i])
             self.edges2add[i] = tuple(self.edges2add[i])
     
-    def insert_cb(self, file):
-        self.data2insert(file)
+    def insert_cb(self, file, notid = False):
+        self.data2insert(file, notid)
         inserting = []
         for u, v, w in self.edges2add:
             if (u, v) in self.Graph.edges():
@@ -59,9 +61,9 @@ class Graph_TM:
         self.Graph.add_weighted_edges_from(inserting)
         self.edges2add = []
         
-    def insert_cbs(self, list_of_files):
+    def insert_cbs(self, list_of_files, notid = False):
         for file in list_of_files:
-            self.insert_cb(file)
+            self.insert_cb(file, notid)
             
     def plot_network(self,
                      node_color = 'steelblue',
