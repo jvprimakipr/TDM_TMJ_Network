@@ -171,6 +171,8 @@ class characters:
         self.zcav = 'Zé Caveirinha'
         self.mor = 'Dona Morte'
         self.ceg = 'Dona Cegonha'
+        self.pix = 'Pixuquinha'
+        self.quix = 'Quixupinha'
 
         ###############################
         #### TURMA DO CHICO BENTO #####

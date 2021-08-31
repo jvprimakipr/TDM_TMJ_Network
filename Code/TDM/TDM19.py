@@ -1,6 +1,6 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
-c = characters('#tdm_38') #Capa - Se Jonas não vai ao parque...
+c = characters('#tdm_38') #Capa
 his1 = [[c.beg, c.mon, c.ceb, c.anj, 'Jonas (cadeirante)', c.end], [], [c.mon, c.ceb] + c.crowd(figs=0, childs=10) + c.shades(10), #Intro
         [c.beg, c.mon, 'João (irmão de Jonas)'], [c.mon, c.ceb, c.san], #1. Se Jonas não vai ao parque... - Pág 4
         [c.mon, c.ceb, c.san],
@@ -63,8 +63,8 @@ his6 = [[c.beg, c.ceb, c.cas], #6. Jogo Perigoso - Pág 56
         [c.mon, c.ceb, c.mag, c.cas],
         [c.mon, c.ceb, c.mag, c.cas],
         [c.mon, c.ceb, c.mag, c.cas, c.end]]
-his7 = [[c.beg, c.pen, c.end], # Tira Final
+his7 = [[c.beg, c.pen, c.end], #7. Tira Final - Pág 66
         [],
         []]
 
-pages = his1 + his2 + his3 + his4 + his5 + his6 + his7
+pages19 = his1 + his2 + his3 + his4 + his5 + his6 + his7
