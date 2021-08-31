@@ -89,7 +89,7 @@ class TM:
                                 index_col = 'Page',
                                 keep_default_na = False)
         for row in self.data.iterrows():
-            for character in row[1]:
+            for character in row[1][2:]:
                 if character != '' and character not in self.characters:
                     self.characters.append(character)
                     self.n_characters += 1
