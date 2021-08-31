@@ -63,7 +63,7 @@ his11= [[c.beg, c.tin, c.pip], #11. Sorria, meu bem! - Pág 60
         [c.tin, c.pip],
         [c.tin, c.pip, c.ID('Serginho')],
         [c.tin, c.pip, c.ID('Serginho'), c.end]]
-his12= [[c.beg, c.pen, c.zvam, c.mum, c.cra, c.end], #12. Tira Final - Pág 66
+his12= [[c.beg, c.pen, c.zvam, c.mum, c.cra, c.end], #12. Tira final - Pág 66
         [],
         []]
 

@@ -149,13 +149,15 @@ class characters:
         self.chov = 'Chovinista'
         self.bid = 'Bidu'
         self.xim = 'Ximbuca'
+        self.rad = 'Radar'
         self.bor = 'Bóris'
         self.manf = 'Manfredo'
         self.ave = 'Aveia'
         self.duq = 'Duque'
-        self.zesq = 'Zé Esquecido'
         self.bug = 'Bugu'
-        self.rad = 'Radar'
+        self.zesq = 'Zé Esquecido'
+        self.ped = 'Dona Pedra'
+        
         
         ###############################
         ##### TURMA DO PENADINHO ######
