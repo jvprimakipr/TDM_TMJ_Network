@@ -1,14 +1,9 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
-
-c = characters()
-c.reset()
-c.comic_book = '#tdm13'
-c.cb = c.comic_book + ' '
-
+c = characters('#tdm_32') #Capa
 pages13 = [[c.beg, c.dud, c.mag, c.end],
            [],
-           [c.beg, c.dud, c.mag, c.cb + 'Princesa'],
+           [c.beg, c.dud, c.mag, c.ID('Princesa')],
            [c.mdud, c.dud],
            [c.mdud, c.dud],
            [c.mdud, c.dud],
@@ -20,7 +15,7 @@ pages13 = [[c.beg, c.dud, c.mag, c.end],
            [c.dud, c.mag],
            [c.dud, c.mag, c.mdud],
            [c.dud, c.mag, c.mdud, c.att()] + c.kids(5) + c.shades(19),
-           [c.dud, c.mag, c.child()],
+           [c.dud, c.mag, c.kid()],
            [c.dud, c.mag],
            [c.dud, c.mag],
            [c.dud, c.mag],
@@ -43,7 +38,7 @@ pages13 = [[c.beg, c.dud, c.mag, c.end],
            [], # [c.mon, c.ceb, c.pip] # correio
            [c.beg, c.pit, c.dino()],
            [c.pit, c.dino(add = 0), c.dino(), c.end],
-           [c.beg, c.mon, c.cas, c.cb + 'Alien', c.end],
+           [c.beg, c.mon, c.cas, c.ali(), c.end],
            [],
            [c.beg, c.marceb, c.fig()],
            [c.marceb, c.floq],
@@ -57,7 +52,7 @@ pages13 = [[c.beg, c.dud, c.mag, c.end],
            [],
            [c.beg, c.floq, c.moca],
            [c.moca, c.bid, c.end],
-           [c.beg, c.chi, c.zlel, c.prof, c.tor, c.anim(), c.mchi] + c.kids(4) + [c.end], # conferir se são figurantes mesmo
+           [c.beg, c.chi, c.zlel, c.zroc, c.prof, c.tor, c.anim(), c.mchi] + c.kids(3) + [c.end], # conferir se são figurantes mesmo
            [c.beg, c.pap, c.caf, c.jur],
            [c.pap, c.caf, c.jur],
            [c.pap, c.caf, c.jur, c.fig(), c.end],
