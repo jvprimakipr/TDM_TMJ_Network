@@ -1,18 +1,13 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
-
-c = characters()
-c.reset()
-c.comic_book = '#tdm11'
-c.cb = c.comic_book + ' '
-
+c = characters('#tdm_30') #Capa
 pages11 = [[c.beg, c.mceb, c.mon, c.mag, c.ceb, c.cas, c.mag, c.end],
 		   [],
 		   [c.cas, c.ceb],
 		   [c.beg, c.mceb, c.mon, c.mag, c.ceb, c.cas] + c.shades(4),
 		   [c.mon, c.mag, c.cas, c.ceb, c.san],
 		   [c.mon, c.mag, c.cas, c.ceb, c.san],
-		   [c.mon, c.mag, c.cas, c.ceb, c.san, c.child(), c.att(), c.att()],
+		   [c.mon, c.mag, c.cas, c.ceb, c.san, c.kid(), c.att(), c.att()],
 		   [c.mon, c.mag, c.cas, c.ceb, c.san],
 		   [c.mon, c.mag, c.cas, c.ceb, c.san],
 		   [c.mon, c.cas, c.ceb, c.san],
@@ -57,8 +52,8 @@ pages11 = [[c.beg, c.mceb, c.mon, c.mag, c.ceb, c.cas, c.mag, c.end],
 		   [c.zlel, c.anim(add = 0), c.anim()],
 		   [c.zlel, c.anim(add = -1), c.anim(), c.anim(), c.end],
 		   [],
-		   ['Homem de Chumbo', 'Zing Mascarado', c.ceb, c.cas],
 		   [c.beg, 'Homem de Chumbo', 'Zing Mascarado', c.ceb, c.cas],
+		   ['Homem de Chumbo', 'Zing Mascarado', c.ceb, c.cas],
 		   ['Homem de Chumbo', 'Zing Mascarado', c.ceb, c.cas, c.mon],
 		   ['Homem de Chumbo', 'Zing Mascarado', c.ceb, c.cas, c.mon],
 		   ['Homem de Chumbo', 'Zing Mascarado', c.ceb, c.cas, c.mon],
