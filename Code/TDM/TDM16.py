@@ -1,12 +1,7 @@
 from Functions.class_TM import TM
 from Functions.class_characters import characters
-
-c = characters()
-c.reset()
-c.comic_book = '#tdm16'
-c.cb = c.comic_book + ' '
-
-pages16 = [[c.beg, c.chi, c.child(), 'Espírito do Milharal', c.end],
+c = characters('#tdm_35') #Capa
+pages16 = [[c.beg, c.chi, c.kid(), 'Espírito do Milharal', c.end],
 		   [],
 		   [c.chi, 'Espírito do Milharal'],
 		   [c.beg, c.chi, c.anim(), c.anim(), c.anim(), c.anim(), c.anim(), c.anim(), c.anim()],
@@ -24,7 +19,7 @@ pages16 = [[c.beg, c.chi, c.child(), 'Espírito do Milharal', c.end],
 		   [c.chi, 'Espírito do Milharal'],
 		   [c.chi, 'Espírito do Milharal'],
 		   [c.chi, 'Espírito do Milharal', c.att()] + c.kids(4),
-		   [c.chi, 'Espírito do Milharal', c.child(), c.att(add = 0)],
+		   [c.chi, 'Espírito do Milharal', c.kid(), c.att(add = 0)],
 		   [c.chi, 'Espírito do Milharal'],
 		   [c.chi, 'Espírito do Milharal'],
 		   [c.chi, 'Espírito do Milharal'],
@@ -36,8 +31,8 @@ pages16 = [[c.beg, c.chi, c.child(), 'Espírito do Milharal', c.end],
 		   [c.chi, c.nho, c.end],
 		   [],
 		   [c.beg, c.bid],
-		   [c.bid, c.duq, 'Zé Gordão', c.anim()], # conferir os dois últimos
-		   [c.bid, c.duq, 'Zé Gordão', c.anim(add = 0), c.end],
+		   [c.bid, c.duq, c.zgor, c.anim()],
+		   [c.bid, c.duq, c.zgor, c.anim(add = 0), c.end],
 		   [], # [c.tin, c.pip, c.rol, c.zec] # passatempo
 		   [], # [c.ceb, c.mon, c.anj] # correio
 		   [], # [c.tit, c.mon, c.ceb, c.den] # correio (conferir denise)
@@ -50,7 +45,7 @@ pages16 = [[c.beg, c.chi, c.child(), 'Espírito do Milharal', c.end],
 		   [c.beg, c.mag, c.min], # mingau só em balão de fala
 		   [c.mag, c.min, c.end],
 		   [c.beg, c.pap, c.caf, c.fig()],
-		   [c.fig(add = 0), c.jur, c.cb + 'Indiazinha 1', c.cb + 'Índio', c.cb + 'Índia', c.fig(), c.cb + 'Indiazinha 2', c.cb + 'Indiazinha 3', c.end],
+		   [c.fig(add = 0), c.jur, c.ID('Indiazinha 1'), c.ID('Índio'), c.ID('Índia'), c.fig(), c.ID('Indiazinha 2'), c.ID('Indiazinha 3'), c.end],
 		   [],
 		   [c.beg, c.cas, c.ceb, c.doc, c.end],
 		   [c.beg, c.fra, c.fig(), c.fig(), c.anim()],
@@ -71,4 +66,4 @@ pages16 = [[c.beg, c.chi, c.child(), 'Espírito do Milharal', c.end],
 		   [c.chi, c.nho, c.anim()],
 		   [c.chi, c.nho, c.fig(), c.fig()],
 		   [c.chi, c.nho, c.fig(add = 0), c.fig(add = -1), c.end],
-		   [c.beg, c.cra, c.cb + 'Fantasminha', c.end]]
+		   [c.beg, c.cra, c.ID('Fantasminha'), c.end]]

@@ -161,6 +161,7 @@ class characters:
         self.duq = 'Duque'
         self.bug = 'Bugu'
         self.zesq = 'Zé Esquecido'
+        self.zgor = 'Zé Gordão'
         self.ped = 'Dona Pedra'
         
         
