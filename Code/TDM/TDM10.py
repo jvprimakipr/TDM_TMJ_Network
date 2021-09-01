@@ -24,7 +24,7 @@ pages10 = [[c.beg, c.cas, c.ceb, c.end],
 	   [c.san, c.cas, c.ceb, c.mon],
 	   [c.san, c.cas, c.ceb, c.mon, c.shade(), c.shade()],
 	   [c.san, c.cas, c.ceb, c.mon] + c.shades(6) + [c.end], # end no final só por padrão meu mesmo, mas poderia ser no meio ;-)
-	   [c.beg, c.chi, c.kid(), c.anim(), c.gis, c.mim, c.tor, c.anim(), 'Onça', c.anim(), c.anim(), c.anim(), c.anim(), c.end],
+	   [c.beg, c.chi, c.kid(), c.anim(), c.gis, c.mim, c.tor, c.anim(), c.ID('Onça'), c.anim(), c.anim(), c.anim(), c.anim(), c.end],
 	   [],
 	   [c.beg, c.bid, c.zesq],
 	   [c.bid, c.zesq],
