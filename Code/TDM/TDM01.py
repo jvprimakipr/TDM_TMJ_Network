@@ -57,7 +57,7 @@ his9 = [[2, [c.lob] + c.anims(4), [c.lob, c.anim(add=-1), c.anim(add=0), c.kid()
         [c.lob, c.anim(add=-1), c.anim(add=0), c.kid(), c.fig(), c.end]]
 his10= [[2, [c.mon], [c.franj, c.bid], c.beg], #10. As Pegadas - Pág 58
         [2, [c.mag, c.min], [c.mon, c.ceb, c.floq], c.end]]
-his11= [[c.beg, c.tin, c.pip], #11. Sorria, meu bem! - Pág 60
+his11= [[c.beg, c.tin, c.pip, c.rol], #11. Sorria, meu bem! - Pág 60
         [2, [c.tin, c.pip], [c.tin, c.ID('Serginho')]],
         [c.tin, c.pip, c.ID('Serginho')],
         [c.tin, c.pip],
